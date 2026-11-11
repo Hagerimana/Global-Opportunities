@@ -22,7 +22,8 @@ DEBUG = False
 
 DATA_ROOT = Path(os.environ.get("DATA_ROOT", "/data"))
 STATIC_URL = "/static/"
-STATIC_ROOT = DATA_ROOT / "static"
+# Static files live in the image (rebuilt on each start), not on the volume.
+STATIC_ROOT = BASE_DIR / "staticfiles"  # noqa: F405
 MEDIA_URL = "/media/"
 MEDIA_ROOT = DATA_ROOT / "media"
 PRIVATE_DOCUMENT_ROOT = DATA_ROOT / "private"
