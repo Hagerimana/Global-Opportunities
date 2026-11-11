@@ -1,0 +1,89 @@
+# ==================================================
+# Secrets and environment configuration
+# ==================================================
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Local certificates and private keys
+*.pem
+*.key
+*.pfx
+*.p12
+
+# ==================================================
+# Python / Django
+# ==================================================
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+
+# Local SQLite databases
+*.sqlite3
+*.sqlite3-*
+
+# Collected Django static assets — not source assets
+/backend/staticfiles/
+
+# ==================================================
+# Confidential documents and uploaded files
+# ==================================================
+/backend/private_documents/
+/backend/media/
+backend/.env
+frontend/.env.local
+.env.docker
+
+# Local backups and database dumps
+/backups/
+/backend/backups/
+*.sql
+*.dump
+*.backup
+
+# ==================================================
+# Next.js / Node.js
+# ==================================================
+node_modules/
+.next/
+/frontend/out/
+/frontend/coverage/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ==================================================
+# Celery runtime files and logs
+# ==================================================
+celerybeat-schedule*
+celerybeat.pid
+*.pid
+*.log
+/automation/logs/
+
+# ==================================================
+# Temporary files and local source backups
+# ==================================================
+*.tmp
+*.temp
+*.bak
+*.orig
+/frontend/next.config.ts.before-docker
+
+# ==================================================
+# Operating-system files
+# ==================================================
+.DS_Store
+Thumbs.db
+Desktop.ini

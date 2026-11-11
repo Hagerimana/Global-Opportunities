@@ -1,0 +1,12 @@
+{
+  "navigation": {
+    "opportunities": "Amahirwe",
+    "funding": "Imfashanyo",
+    "projects": "Imigambi",
+    "ai": "Umufasha wa AI"
+  },
+  "actions": {
+    "explore": "Raba amahirwe",
+    "getStarted": "Tanguza"
+  }
+}

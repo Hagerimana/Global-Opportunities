@@ -1,0 +1,402 @@
+{
+  "Only draft projects can be returned to verification.": {
+    "fr": "Seuls les projets brouillons peuvent être renvoyés à la vérification.",
+    "rn": "Gusa imigambi y'agateganyo ni yo ishobora gusubizwa mu kwemeza.",
+    "sw": "Ni miradi ya rasimu pekee inayoweza kurejeshwa kwa uthibitishaji."
+  },
+  "Only draft projects can be verified.": {
+    "fr": "Seuls les projets brouillons peuvent être vérifiés.",
+    "rn": "Gusa imigambi y'agateganyo ni yo ishobora kwemezwa.",
+    "sw": "Ni miradi ya rasimu pekee inayoweza kuthibitishwa."
+  },
+  "Only drafts can be changed through this endpoint.": {
+    "fr": "Seuls les brouillons peuvent être modifiés via ce point de terminaison.",
+    "rn": "Gusa inyandiko z'agateganyo ni zo zishobora guhindurwa muri ubu buryo.",
+    "sw": "Ni rasimu pekee zinazoweza kubadilishwa kupitia kiungo hiki."
+  },
+  "Only drafts can be deleted through this endpoint.": {
+    "fr": "Seuls les brouillons peuvent être supprimés via ce point de terminaison.",
+    "rn": "Gusa inyandiko z'agateganyo ni zo zishobora gusibwa muri ubu buryo.",
+    "sw": "Ni rasimu pekee zinazoweza kufutwa kupitia kiungo hiki."
+  },
+  "Only drafts can be edited in this workflow.": {
+    "fr": "Seuls les brouillons peuvent être modifiés dans ce parcours.",
+    "rn": "Gusa inyandiko z'agateganyo ni zo zishobora guhindurwa muri ubu buryo.",
+    "sw": "Ni rasimu pekee zinazoweza kuhaririwa katika mtiririko huu."
+  },
+  "Only personal accounts with a linked person can request a professional profile.": {
+    "fr": "Seuls les comptes personnels liés à une personne peuvent demander un profil professionnel.",
+    "rn": "Gusa ikonti bwite zihujwe n'umuntu ni zo zishobora gusaba umwirondoro w'umwuga.",
+    "sw": "Ni akaunti za kibinafsi zilizounganishwa na mtu pekee zinazoweza kuomba wasifu wa kitaalamu."
+  },
+  "Only the invited Expert may respond.": {
+    "fr": "Seul l'expert invité peut répondre.",
+    "rn": "Gusa umuhanga yatumiwe ni we ashobora kwishura.",
+    "sw": "Ni mtaalam aliyealikwa pekee anayeweza kujibu."
+  },
+  "Only the project creator may cancel this invitation.": {
+    "fr": "Seul le créateur du projet peut annuler cette invitation.",
+    "rn": "Gusa uwatanze umugambi ni we ashobora guhagarika ubu butumire.",
+    "sw": "Ni muundaji wa mradi pekee anayeweza kughairi mwaliko huu."
+  },
+  "Only the project creator may invite an Expert.": {
+    "fr": "Seul le créateur du projet peut inviter un expert.",
+    "rn": "Gusa uwatanze umugambi ni we ashobora gutumira umuhanga.",
+    "sw": "Ni muundaji wa mradi pekee anayeweza kualika mtaalam."
+  },
+  "Only the project creator may send an Expert invitation through this workflow.": {
+    "fr": "Seul le créateur du projet peut envoyer une invitation d'expert via ce parcours.",
+    "rn": "Gusa uwatanze umugambi ni we ashobora kuhereza ubutumire bw'umuhanga muri ubu buryo.",
+    "sw": "Ni muundaji wa mradi pekee anayeweza kutuma mwaliko wa mtaalam kupitia mtiririko huu."
+  },
+  "Only the project creator may upload its proposal through this workflow.": {
+    "fr": "Seul le créateur du projet peut téléverser sa proposition via ce parcours.",
+    "rn": "Gusa uwatanze umugambi ni we ashobora gushira inyandiko y'umugambi muri ubu buryo.",
+    "sw": "Ni muundaji wa mradi pekee anayeweza kupakia pendekezo lake kupitia mtiririko huu."
+  },
+  "Organization details are required for an organization account.": {
+    "fr": "Les détails de l'organisation sont requis pour un compte d'organisation.",
+    "rn": "Amakuru y'ishirahamwe arasabwa ku konti y'ishirahamwe.",
+    "sw": "Maelezo ya shirika yanahitajika kwa akaunti ya shirika."
+  },
+  "Organization details must not be submitted for a personal account.": {
+    "fr": "Les détails de l'organisation ne doivent pas être soumis pour un compte personnel.",
+    "rn": "Amakuru y'ishirahamwe ntategerezwa gutangwa ku konti bwite.",
+    "sw": "Maelezo ya shirika hayapaswi kuwasilishwa kwa akaunti ya kibinafsi."
+  },
+  "Other": {
+    "fr": "Autre",
+    "rn": "Ibindi",
+    "sw": "Nyingine"
+  },
+  "PDF processing is temporarily unavailable.": {
+    "fr": "Le traitement des PDF est temporairement indisponible.",
+    "rn": "Gutunganya PDF ntibiboneka ubu.",
+    "sw": "Usindikaji wa PDF haupatikani kwa sasa."
+  },
+  "Password changed successfully.": {
+    "fr": "Mot de passe modifié avec succès.",
+    "rn": "Ijambo ry'ibanga ryahinduwe neza.",
+    "sw": "Nenosiri limebadilishwa kwa mafanikio."
+  },
+  "Password recovery is not available for this account. Please contact support.": {
+    "fr": "La récupération de mot de passe n'est pas disponible pour ce compte. Veuillez contacter le support.",
+    "rn": "Kugarura ijambo ry'ibanga ntibiboneka kuri iyi konti. Ndagusavye uvugane n'ubufasha.",
+    "sw": "Urejeshaji wa nenosiri haupatikani kwa akaunti hii. Tafadhali wasiliana na msaada."
+  },
+  "Password recovery is unavailable for this account.": {
+    "fr": "La récupération de mot de passe est indisponible pour ce compte.",
+    "rn": "Kugarura ijambo ry'ibanga ntibiboneka kuri iyi konti.",
+    "sw": "Urejeshaji wa nenosiri haupatikani kwa akaunti hii."
+  },
+  "Passwords do not match.": {
+    "fr": "Les mots de passe ne correspondent pas.",
+    "rn": "Amajambo y'ibanga ntayahuye.",
+    "sw": "Manenosiri hayalingani."
+  },
+  "Payments cannot exceed the disbursement amount.": {
+    "fr": "Les paiements ne peuvent pas dépasser le montant du décaissement.",
+    "rn": "Amafaranga yo kwishura ntashobora kurenza amafaranga atangwa.",
+    "sw": "Malipo hayawezi kuzidi kiasi cha malipo yaliyotolewa."
+  },
+  "Personal registration details are incomplete. Please register again.": {
+    "fr": "Les détails de l'inscription personnelle sont incomplets. Veuillez vous réinscrire.",
+    "rn": "Amakuru yo kwiyandikisha bwite ntakwiye. Ndagusavye wiyandikishe ukundi.",
+    "sw": "Maelezo ya usajili wa kibinafsi hayajakamilika. Tafadhali jisajili tena."
+  },
+  "Please enter a question.": {
+    "fr": "Veuillez saisir une question.",
+    "rn": "Ndagusavye wandike ikibazo.",
+    "sw": "Tafadhali weka swali."
+  },
+  "Please wait {seconds} seconds before requesting another code.": {
+    "fr": "Veuillez attendre {seconds} secondes avant de demander un autre code.",
+    "rn": "Ndagusavye utegereze amasegonda {seconds} imbere yo gusaba iyindi kode.",
+    "sw": "Tafadhali subiri sekunde {seconds} kabla ya kuomba msimbo mwingine."
+  },
+  "Professional profile draft created.": {
+    "fr": "Brouillon de profil professionnel créé.",
+    "rn": "Inyandiko y'agateganyo y'umwirondoro w'umwuga yashizweho.",
+    "sw": "Rasimu ya wasifu wa kitaalamu imeundwa."
+  },
+  "Professional profile draft updated.": {
+    "fr": "Brouillon de profil professionnel mis à jour.",
+    "rn": "Inyandiko y'agateganyo y'umwirondoro w'umwuga yavuguruwe.",
+    "sw": "Rasimu ya wasifu wa kitaalamu imesasishwa."
+  },
+  "Professional profiles require a personal account with a linked person profile.": {
+    "fr": "Les profils professionnels nécessitent un compte personnel avec un profil de personne lié.",
+    "rn": "Umwirondoro w'umwuga usaba ikonti bwite ifise umwirondoro w'umuntu wahujwe.",
+    "sw": "Wasifu wa kitaalamu unahitaji akaunti ya kibinafsi yenye wasifu wa mtu uliounganishwa."
+  },
+  "Progress may not exceed 100%.": {
+    "fr": "Le progrès ne peut pas dépasser 100 %.",
+    "rn": "Aho bigeze ntibishobora kurenza 100%.",
+    "sw": "Maendeleo hayawezi kuzidi 100%."
+  },
+  "Progress must be between 0 and 100.": {
+    "fr": "Le progrès doit être compris entre 0 et 100.",
+    "rn": "Aho bigeze gutegerezwa kuba hagati ya 0 na 100.",
+    "sw": "Maendeleo lazima yawe kati ya 0 na 100."
+  },
+  "Project content is available to its creator, an accepted invited Expert with an active verified profile, or an eligible verified organization.": {
+    "fr": "Le contenu du projet est accessible à son créateur, à un expert invité accepté avec un profil actif et vérifié, ou à une organisation vérifiée éligible.",
+    "rn": "Ibirimwo mu mugambi biraboneka ku wawutanze, ku muhanga yatumiwe yemeye afise umwirondoro ukora kandi wemejwe, canke ku shirahamwe ryemejwe kandi ryemewe.",
+    "sw": "Maudhui ya mradi yanapatikana kwa muundaji wake, mtaalam aliyealikwa aliyekubali na wasifu unaotumika na uliothibitishwa, au shirika lililothibitishwa linalostahiki."
+  },
+  "Project discussion: {}": {
+    "fr": "Discussion du projet : {}",
+    "rn": "Ibiganiro ku mugambi: {}",
+    "sw": "Majadiliano ya mradi: {}"
+  },
+  "Project end date must be on or after its start date.": {
+    "fr": "La date de fin du projet doit être à la date de début ou après.",
+    "rn": "Itariki yo kurangiza umugambi itegerezwa kuba kuri canke inyuma y'itariki yo gutangura.",
+    "sw": "Tarehe ya mwisho ya mradi lazima iwe siku ya kuanza au baada yake."
+  },
+  "Project not found.": {
+    "fr": "Projet introuvable.",
+    "rn": "Umugambi ntawubonetse.",
+    "sw": "Mradi haujapatikana."
+  },
+  "Proposal preparation status: {status}.": {
+    "fr": "État de préparation de la proposition : {status}.",
+    "rn": "Aho itegurwa ry'inyandiko y'umugambi rigeze: {status}.",
+    "sw": "Hali ya utayarishaji wa pendekezo: {status}."
+  },
+  "Provide a conclusion.": {
+    "fr": "Fournissez une conclusion.",
+    "rn": "Tanga umwanzuro.",
+    "sw": "Toa hitimisho."
+  },
+  "Provide a non-empty list of permitted MIME types.": {
+    "fr": "Fournissez une liste non vide des types MIME autorisés.",
+    "rn": "Tanga urukurikirane rudafise ubusa rw'ubwoko bwa MIME bwemewe.",
+    "sw": "Toa orodha isiyo tupu ya aina za MIME zinazoruhusiwa."
+  },
+  "Provide a valid UUID.": {
+    "fr": "Fournissez un UUID valide.",
+    "rn": "Tanga UUID yemewe.",
+    "sw": "Toa UUID halali."
+  },
+  "Provide archived or hidden.": {
+    "fr": "Fournissez « archived » ou « hidden ».",
+    "rn": "Tanga « archived » canke « hidden ».",
+    "sw": "Toa « archived » au « hidden »."
+  },
+  "Provide both target_type and target_id, or neither.": {
+    "fr": "Fournissez à la fois target_type et target_id, ou aucun des deux.",
+    "rn": "Tanga target_type na target_id vyose, canke nta na kimwe.",
+    "sw": "Toa target_type na target_id zote, au hakuna hata moja."
+  },
+  "Provide exactly one payment payee.": {
+    "fr": "Fournissez exactement un bénéficiaire de paiement.",
+    "rn": "Tanga umwe gusa uwishura amafaranga.",
+    "sw": "Toa mpokeaji mmoja wa malipo hasa."
+  },
+  "Provide exactly one project owner: person or organization.": {
+    "fr": "Fournissez exactement un propriétaire de projet : personne ou organisation.",
+    "rn": "Tanga umwe gusa nyen'umugambi: umuntu canke ishirahamwe.",
+    "sw": "Toa mmiliki mmoja wa mradi hasa: mtu au shirika."
+  },
+  "Provide text.": {
+    "fr": "Fournissez un texte.",
+    "rn": "Tanga inyandiko.",
+    "sw": "Toa maandishi."
+  },
+  "Provide true or false.": {
+    "fr": "Fournissez true ou false.",
+    "rn": "Tanga true canke false.",
+    "sw": "Toa true au false."
+  },
+  "Reader pages are missing or incomplete: {stored} stored page(s), {expected} expected.": {
+    "fr": "Les pages du lecteur sont manquantes ou incomplètes : {stored} page(s) stockée(s), {expected} attendue(s).",
+    "rn": "Amapapuro yo gusoma arabura canke ntakwiye: amapapuro {stored} yabitswe, {expected} yitezwe.",
+    "sw": "Kurasa za msomaji hazipo au hazijakamilika: kurasa {stored} zimehifadhiwa, {expected} zinatarajiwa."
+  },
+  "Record the reason this requirement does not apply.": {
+    "fr": "Enregistrez la raison pour laquelle cette exigence ne s'applique pas.",
+    "rn": "Andika impamvu iyi ntunganyo itakora.",
+    "sw": "Rekodi sababu mahitaji haya hayatumiki."
+  },
+  "Registration could not be completed because of a conflicting database record. The account or organization may already exist.": {
+    "fr": "L'inscription n'a pas pu être terminée en raison d'un enregistrement de base de données en conflit. Le compte ou l'organisation existe peut-être déjà.",
+    "rn": "Kwiyandikisha ntivyashobotse kubera ikindi cakiriwe mu bubiko bw'amakuru. Ikonti canke ishirahamwe bishobora kuba bisanzweho.",
+    "sw": "Usajili haukuweza kukamilika kwa sababu ya rekodi inayogongana kwenye hifadhidata. Akaunti au shirika huenda tayari lipo."
+  },
+  "Registration started. A verification code has been sent to your email.": {
+    "fr": "Inscription lancée. Un code de vérification a été envoyé à votre adresse e-mail.",
+    "rn": "Kwiyandikisha kwatanguye. Kode yo kwemeza yoherejwe mu imeyili yawe.",
+    "sw": "Usajili umeanza. Msimbo wa uthibitishaji umetumwa kwenye barua pepe yako."
+  },
+  "Reset your Global Opportunities password": {
+    "fr": "Réinitialisez votre mot de passe Global Opportunities",
+    "rn": "Garura ijambo ry'ibanga ryawe kuri Global Opportunities",
+    "sw": "Weka upya nenosiri lako la Global Opportunities"
+  },
+  "Science and research": {
+    "fr": "Science et recherche",
+    "rn": "Siyansi n'ubushakashatsi",
+    "sw": "Sayansi na utafiti"
+  },
+  "Score must be within the criterion maximum.": {
+    "fr": "Le score doit être dans le maximum du critère.",
+    "rn": "Amanota ategerezwa kuba mu kigero ntarengwa c'ikipimo.",
+    "sw": "Alama lazima ziwe ndani ya kiwango cha juu cha kigezo."
+  },
+  "Security scanning failed. Check the scanner configuration and processing log.": {
+    "fr": "L'analyse de sécurité a échoué. Vérifiez la configuration du scanner et le journal de traitement.",
+    "rn": "Igenzura ry'umutekano ryananiranye. Raba igenamiterere ry'igikoresho co kugenzura n'inyandiko y'ibikorwa.",
+    "sw": "Uchunguzi wa usalama umeshindikana. Angalia usanidi wa kichunguzi na kumbukumbu ya usindikaji."
+  },
+  "Security scanning has not completed.": {
+    "fr": "L'analyse de sécurité n'est pas terminée.",
+    "rn": "Igenzura ry'umutekano ntirirangiye.",
+    "sw": "Uchunguzi wa usalama haujakamilika."
+  },
+  "Select Male or Female.": {
+    "fr": "Sélectionnez Homme ou Femme.",
+    "rn": "Hitamo Umugabo canke Umugore.",
+    "sw": "Chagua Mwanaume au Mwanamke."
+  },
+  "Select a PDF file.": {
+    "fr": "Sélectionnez un fichier PDF.",
+    "rn": "Hitamo dosiye PDF.",
+    "sw": "Chagua faili ya PDF."
+  },
+  "Select a commune in the selected province.": {
+    "fr": "Sélectionnez une commune dans la province sélectionnée.",
+    "rn": "Hitamo komine mu ntara yahiswemwo.",
+    "sw": "Chagua kata katika mkoa uliochaguliwa."
+  },
+  "Select a commune.": {
+    "fr": "Sélectionnez une commune.",
+    "rn": "Hitamo komine.",
+    "sw": "Chagua kata."
+  },
+  "Select a country from the catalogue.": {
+    "fr": "Sélectionnez un pays dans le catalogue.",
+    "rn": "Hitamo igihugu mu rutonde.",
+    "sw": "Chagua nchi kutoka kwenye katalogi."
+  },
+  "Select a country from the current catalogue.": {
+    "fr": "Sélectionnez un pays dans le catalogue actuel.",
+    "rn": "Hitamo igihugu mu rutonde rw'ubu.",
+    "sw": "Chagua nchi kutoka kwenye katalogi ya sasa."
+  },
+  "Select a professional domain first.": {
+    "fr": "Sélectionnez d'abord un domaine professionnel.",
+    "rn": "Banza uhitore ikigo c'igikorwa c'umwuga.",
+    "sw": "Kwanza chagua kikoa cha kitaalamu."
+  },
+  "Select a project domain.": {
+    "fr": "Sélectionnez un domaine de projet.",
+    "rn": "Hitamo ikigo c'igikorwa c'umugambi.",
+    "sw": "Chagua kikoa cha mradi."
+  },
+  "Select a province.": {
+    "fr": "Sélectionnez une province.",
+    "rn": "Hitamo intara.",
+    "sw": "Chagua mkoa."
+  },
+  "Select a supported project domain.": {
+    "fr": "Sélectionnez un domaine de projet pris en charge.",
+    "rn": "Hitamo ikigo c'igikorwa c'umugambi gishigikiwe.",
+    "sw": "Chagua kikoa cha mradi kinachotumika."
+  },
+  "Select a verified colline or quartier.": {
+    "fr": "Sélectionnez une colline ou un quartier vérifié.",
+    "rn": "Hitamo colline canke quartier ryemejwe.",
+    "sw": "Chagua colline au mtaa uliothibitishwa."
+  },
+  "Select a verified locality in the selected commune.": {
+    "fr": "Sélectionnez une localité vérifiée dans la commune sélectionnée.",
+    "rn": "Hitamo ahantu hemejwe mu komine yahiswemwo.",
+    "sw": "Chagua eneo lililothibitishwa katika kata iliyochaguliwa."
+  },
+  "Select an active Burundi province.": {
+    "fr": "Sélectionnez une province active du Burundi.",
+    "rn": "Hitamo intara ikora yo mu Burundi.",
+    "sw": "Chagua mkoa unaotumika wa Burundi."
+  },
+  "Select at least one interest.": {
+    "fr": "Sélectionnez au moins un intérêt.",
+    "rn": "Hitamo nibura ikintu kimwe ukunda.",
+    "sw": "Chagua angalau shauku moja."
+  },
+  "Select distinct supported interests.": {
+    "fr": "Sélectionnez des intérêts distincts pris en charge.",
+    "rn": "Hitamo ivyo ukunda bitandukanye kandi vyemewe.",
+    "sw": "Chagua maslahi tofauti yanayotumika."
+  },
+  "Sign in to Global Opportunities to view the details:": {
+    "fr": "Connectez-vous à Global Opportunities pour voir les détails :",
+    "rn": "Injira kuri Global Opportunities kugira ubone amakuru arambuye:",
+    "sw": "Ingia kwenye Global Opportunities ili kuona maelezo:"
+  },
+  "Sport": {
+    "fr": "Sport",
+    "rn": "Imikino",
+    "sw": "Michezo"
+  },
+  "Technology": {
+    "fr": "Technologie",
+    "rn": "Ikoranabuhanga",
+    "sw": "Teknolojia"
+  },
+  "The Expert rejected the invitation.": {
+    "fr": "L'expert a rejeté l'invitation.",
+    "rn": "Umuhanga yanse ubutumire.",
+    "sw": "Mtaalam alikataa mwaliko."
+  },
+  "The PDF could not be read.": {
+    "fr": "Le PDF n'a pas pu être lu.",
+    "rn": "PDF ntivyashobotse gusomwa.",
+    "sw": "PDF haikuweza kusomwa."
+  },
+  "The PDF exceeds the page-count limit.": {
+    "fr": "Le PDF dépasse la limite du nombre de pages.",
+    "rn": "PDF irenze inomero ntarengwa y'amapapuro.",
+    "sw": "PDF inazidi kikomo cha idadi ya kurasa."
+  },
+  "The PDF has no pages.": {
+    "fr": "Le PDF n'a pas de pages.",
+    "rn": "PDF nta mapapuro ifise.",
+    "sw": "PDF haina kurasa."
+  },
+  "The PDF must be 20 MB or smaller.": {
+    "fr": "Le PDF doit faire 20 Mo ou moins.",
+    "rn": "PDF itegerezwa kuba ingana canke munsi ya MB 20.",
+    "sw": "PDF lazima iwe MB 20 au chini."
+  },
+  "The account email has changed. Request a new recovery code.": {
+    "fr": "L'e-mail du compte a changé. Demandez un nouveau code de récupération.",
+    "rn": "Imeyili y'ikonti yahindutse. Saba kode nshasha yo kugarura.",
+    "sw": "Barua pepe ya akaunti imebadilika. Omba msimbo mpya wa urejeshaji."
+  },
+  "The account must have a login email.": {
+    "fr": "Le compte doit avoir un e-mail de connexion.",
+    "rn": "Ikonti itegerezwa kugira imeyili yo kwinjira.",
+    "sw": "Akaunti lazima iwe na barua pepe ya kuingia."
+  },
+  "The commune must belong to the selected province.": {
+    "fr": "La commune doit appartenir à la province sélectionnée.",
+    "rn": "Komine itegerezwa kuba mu ntara yahiswemwo.",
+    "sw": "Kata lazima kiwe ndani ya mkoa uliochaguliwa."
+  },
+  "The conversation participant configuration is invalid.": {
+    "fr": "La configuration des participants à la conversation est invalide.",
+    "rn": "Igenamiterere ry'abagira uruhara mu kiganiro ntirikwiye.",
+    "sw": "Usanidi wa washiriki wa mazungumzo si sahihi."
+  },
+  "The document must belong exclusively to the applicant's person profile.": {
+    "fr": "Le document doit appartenir exclusivement au profil de personne du candidat.",
+    "rn": "Inyandiko itegerezwa kuba iy'umwirondoro w'umuntu w'usaba gusa.",
+    "sw": "Hati lazima iwe ya wasifu wa mtu wa mwombaji pekee."
+  },
+  "The document type for '{}' is inactive. Please contact an administrator.": {
+    "fr": "Le type de document pour « {} » est inactif. Veuillez contacter un administrateur.",
+    "rn": "Ubwoko bw'inyandiko bwa '{}' ntibukora. Ndagusavye uvugane n'umuyobozi.",
+    "sw": "Aina ya hati ya '{}' haitumiki. Tafadhali wasiliana na msimamizi."
+  }
+}

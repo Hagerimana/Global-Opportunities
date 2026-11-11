@@ -1,0 +1,107 @@
+{
+  "Mentor": {
+    "fr": "Mentor",
+    "rn": "Mentor",
+    "sw": "Mshauri"
+  },
+  "Expert": {
+    "fr": "Expert",
+    "rn": "Expert",
+    "sw": "Mtaalamu"
+  },
+  "Trainer": {
+    "fr": "Formateur",
+    "rn": "Trainer",
+    "sw": "Mkufunzi"
+  },
+  "Finance": {
+    "fr": "Finance",
+    "rn": "Imari",
+    "sw": "Fedha"
+  },
+  "Fundraising": {
+    "fr": "Collecte de fonds",
+    "rn": "Gukusanya imfashanyo",
+    "sw": "Ukusanya fedha"
+  },
+  "Project management": {
+    "fr": "Gestion de projet",
+    "rn": "Imicungire y'imigambi",
+    "sw": "Usimamizi wa miradi"
+  },
+  "Engineering": {
+    "fr": "Ingénierie",
+    "rn": "Ubuhanga bw'ubwubatsi",
+    "sw": "Uhandisi"
+  },
+  "Social development": {
+    "fr": "Développement social",
+    "rn": "Iterambere ry'imibano",
+    "sw": "Maendeleo ya jamii"
+  },
+  "Governance": {
+    "fr": "Gouvernance",
+    "rn": "Ubutegetsi",
+    "sw": "Utawala"
+  },
+  "Law": {
+    "fr": "Droit",
+    "rn": "Amategeko",
+    "sw": "Sheria"
+  },
+  "Research": {
+    "fr": "Recherche",
+    "rn": "Ubushakashatsi",
+    "sw": "Utafiti"
+  },
+  "Marketing": {
+    "fr": "Marketing",
+    "rn": "Ikwamamazo",
+    "sw": "Masoko"
+  },
+  "Human resources": {
+    "fr": "Ressources humaines",
+    "rn": "Abakozi",
+    "sw": "Rasilimali watu"
+  },
+  "Monitoring and evaluation": {
+    "fr": "Suivi et évaluation",
+    "rn": "Gukurikirana no gusuzuma",
+    "sw": "Ufuatiliaji na tathmini"
+  },
+  "Logistics": {
+    "fr": "Logistique",
+    "rn": "Ivyerekeye ingendo n'ibikoresho",
+    "sw": "Usafirishaji"
+  },
+  "Construction": {
+    "fr": "Construction",
+    "rn": "Ubwubatsi",
+    "sw": "Ujenzi"
+  },
+  "Energy": {
+    "fr": "Énergie",
+    "rn": "Inguvu",
+    "sw": "Nishati"
+  },
+  "Languages": {
+    "fr": "Langues",
+    "rn": "Indimi",
+    "sw": "Lugha"
+  },
+  "Colline": {
+    "fr": "Colline",
+    "rn": "Colline",
+    "sw": "Colline"
+  },
+  "Quartier": {
+    "fr": "Quartier",
+    "rn": "Quartier",
+    "sw": "Mtaa"
+  },
+  "Classification not verified": {
+    "fr": "Classification non vérifiée",
+    "rn": "Ivyiciro ntivyemejwe",
+    "sw": "Uainishaji haujathibitishwa"
+  }
+}

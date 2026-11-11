@@ -1,0 +1,412 @@
+{
+  "The invitation could not be saved because of a conflicting record. Refresh and try again.": {
+    "fr": "L'invitation n'a pas pu être enregistrée en raison d'un enregistrement en conflit. Actualisez et réessayez.",
+    "rn": "Ubutumire ntibwabitswe kubera ikindi canditswe gihuye. Subiza urupapuro hanyuma ugerageze ukundi.",
+    "sw": "Mwaliko haukuweza kuhifadhiwa kwa sababu ya rekodi inayogongana. Onyesha upya na ujaribu tena."
+  },
+  "The invitation lifetime must be at least one day.": {
+    "fr": "La durée de vie de l'invitation doit être d'au moins un jour.",
+    "rn": "Igihe c'ubutumire itegerezwa kuba nibura umusi umwe.",
+    "sw": "Muda wa mwaliko lazima uwe angalau siku moja."
+  },
+  "The invitation response deadline passed.": {
+    "fr": "Le délai de réponse à l'invitation est dépassé.",
+    "rn": "Itariki ntarengwa yo kwishura ubutumire yarengewe.",
+    "sw": "Muda wa kujibu mwaliko umepita."
+  },
+  "The invited account must have an active, approved Expert profile.": {
+    "fr": "Le compte invité doit avoir un profil d'expert actif et approuvé.",
+    "rn": "Ikonti yatumiwe itegerezwa kugira umwirondoro w'umuhanga ukora kandi wemejwe.",
+    "sw": "Akaunti iliyoalikwa lazima iwe na wasifu wa mtaalam unaotumika na ulioidhinishwa."
+  },
+  "The operation conflicted with another change. Refresh and try again.": {
+    "fr": "L'opération est entrée en conflit avec une autre modification. Actualisez et réessayez.",
+    "rn": "Igikorwa cahuye n'ikindi gihinduka. Subiza urupapuro hanyuma ugerageze ukundi.",
+    "sw": "Operesheni iligongana na mabadiliko mengine. Onyesha upya na ujaribu tena."
+  },
+  "The password has changed since this code was issued. Request a new code.": {
+    "fr": "Le mot de passe a changé depuis l'émission de ce code. Demandez un nouveau code.",
+    "rn": "Ijambo ry'ibanga ryahindutse kuva iyi kode itangazwa. Saba kode nshasha.",
+    "sw": "Nenosiri limebadilika tangu msimbo huu utolewe. Omba msimbo mpya."
+  },
+  "The previous profile must belong to this applicant.": {
+    "fr": "Le profil précédent doit appartenir à ce candidat.",
+    "rn": "Umwirondoro wabanje utegerezwa kuba uw'uyu usaba.",
+    "sw": "Wasifu uliopita lazima uwe wa mwombaji huyu."
+  },
+  "The private message length configuration is invalid.": {
+    "fr": "La configuration de la longueur des messages privés est invalide.",
+    "rn": "Igenamiterere ry'uburebure bw'ubutumwa bwite ntirikwiye.",
+    "sw": "Usanidi wa urefu wa ujumbe wa faragha si sahihi."
+  },
+  "The project creator cancelled the invitation.": {
+    "fr": "Le créateur du projet a annulé l'invitation.",
+    "rn": "Uwatanze umugambi yahagaritse ubutumire.",
+    "sw": "Muundaji wa mradi ameghairi mwaliko."
+  },
+  "The proposal has no successful security scan. The configured scanner must be checked and the proposal reprocessed.": {
+    "fr": "La proposition n'a pas d'analyse de sécurité réussie. Le scanner configuré doit être vérifié et la proposition retraitée.",
+    "rn": "Inyandiko y'umugambi nta genzura ry'umutekano ryashobotse ifise. Igikoresho co kugenzura cagenwe itegerezwa kugenzurwa hanyuma inyandiko y'umugambi itunganywe ukundi.",
+    "sw": "Pendekezo halina uchunguzi wa usalama uliofanikiwa. Kichunguzi kilichosanidiwa lazima kikaguliwe na pendekezo lisindikajiwe upya."
+  },
+  "The proposal has not passed security scanning.": {
+    "fr": "La proposition n'a pas passé l'analyse de sécurité.",
+    "rn": "Inyandiko y'umugambi ntirenze igenzura ry'umutekano.",
+    "sw": "Pendekezo halijapita uchunguzi wa usalama."
+  },
+  "The recovery code is incorrect.": {
+    "fr": "Le code de récupération est incorrect.",
+    "rn": "Kode yo kugarura ntikwiye.",
+    "sw": "Msimbo wa urejeshaji si sahihi."
+  },
+  "The requested conversation, invitation, or message was not found.": {
+    "fr": "La conversation, l'invitation ou le message demandé est introuvable.",
+    "rn": "Ikiganiro, ubutumire canke ubutumwa vyasabwe ntibibonetse.",
+    "sw": "Mazungumzo, mwaliko au ujumbe ulioombwa haujapatikana."
+  },
+  "The requested project, account, or invitation was not found.": {
+    "fr": "Le projet, le compte ou l'invitation demandé est introuvable.",
+    "rn": "Umugambi, ikonti canke ubutumire vyasabwe ntibibonetse.",
+    "sw": "Mradi, akaunti au mwaliko ulioombwa haujapatikana."
+  },
+  "The resulting profile must belong to this applicant.": {
+    "fr": "Le profil résultant doit appartenir à ce candidat.",
+    "rn": "Umwirondoro uva mu bikorwa utegerezwa kuba uw'uyu usaba.",
+    "sw": "Wasifu unaotokana lazima uwe wa mwombaji huyu."
+  },
+  "The scanner reported a threat or scan-limit alert. This file cannot be posted.": {
+    "fr": "Le scanner a signalé une menace ou une alerte de limite d'analyse. Ce fichier ne peut pas être publié.",
+    "rn": "Igikoresho co kugenzura catanze ikimenyetso c'akaga canke c'urugero rw'igenzura. Iyi dosiye ntishobora gutangazwa.",
+    "sw": "Kichunguzi kimeripoti tishio au tahadhari ya kikomo cha uchunguzi. Faili hii haiwezi kuchapishwa."
+  },
+  "The sender and recipient must be the two conversation participants.": {
+    "fr": "L'expéditeur et le destinataire doivent être les deux participants à la conversation.",
+    "rn": "Uwohereza n'uwakira bategerezwa kuba ari bo bagira uruhara babiri mu kiganiro.",
+    "sw": "Mtumaji na mpokeaji lazima wawe washiriki wawili wa mazungumzo."
+  },
+  "The uploaded file must be a valid PDF.": {
+    "fr": "Le fichier téléversé doit être un PDF valide.",
+    "rn": "Dosiye yashizwe itegerezwa kuba PDF yemewe.",
+    "sw": "Faili iliyopakiwa lazima iwe PDF halali."
+  },
+  "The verification code is incorrect.": {
+    "fr": "Le code de vérification est incorrect.",
+    "rn": "Kode yo kwemeza ntikwiye.",
+    "sw": "Msimbo wa uthibitishaji si sahihi."
+  },
+  "The verification code must contain four digits.": {
+    "fr": "Le code de vérification doit contenir quatre chiffres.",
+    "rn": "Kode yo kwemeza itegerezwa kugira inimero ine.",
+    "sw": "Msimbo wa uthibitishaji lazima uwe na tarakimu nne."
+  },
+  "This Expert already has a live invitation for this project.": {
+    "fr": "Cet expert a déjà une invitation active pour ce projet.",
+    "rn": "Uyu muhanga afise asanzwe ubutumire bukiriho kuri uyu mugambi.",
+    "sw": "Mtaalam huyu tayari ana mwaliko hai kwa mradi huu."
+  },
+  "This account has an unsupported account type.": {
+    "fr": "Ce compte a un type de compte non pris en charge.",
+    "rn": "Iyi konti ifise ubwoko bw'ikonti butemewe.",
+    "sw": "Akaunti hii ina aina ya akaunti isiyotumika."
+  },
+  "This account must have exactly one organization to use this account page. Please contact support.": {
+    "fr": "Ce compte doit avoir exactement une organisation pour utiliser cette page de compte. Veuillez contacter le support.",
+    "rn": "Iyi konti itegerezwa kugira ishirahamwe rimwe gusa kugira ikoreshe uru rupapuro rw'ikonti. Ndagusavye uvugane n'ubufasha.",
+    "sw": "Akaunti hii lazima iwe na shirika moja hasa ili kutumia ukurasa huu wa akaunti. Tafadhali wasiliana na msaada."
+  },
+  "This account no longer exists.": {
+    "fr": "Ce compte n'existe plus.",
+    "rn": "Iyi konti ntisanzweho ukundi.",
+    "sw": "Akaunti hii haipo tena."
+  },
+  "This code has expired. Request a new code.": {
+    "fr": "Ce code a expiré. Demandez un nouveau code.",
+    "rn": "Iyi kode yarangiye. Saba kode nshasha.",
+    "sw": "Msimbo huu umeisha muda. Omba msimbo mpya."
+  },
+  "This conversation is closed.": {
+    "fr": "Cette conversation est fermée.",
+    "rn": "Iki kiganiro carafunze.",
+    "sw": "Mazungumzo haya yamefungwa."
+  },
+  "This email does not contain the project document or private conversation content.": {
+    "fr": "Cet e-mail ne contient pas le document du projet ni le contenu de la conversation privée.",
+    "rn": "Iyi imeyili nta nyandiko y'umugambi canke ibirimwo mu kiganiro bwite ifise.",
+    "sw": "Barua pepe hii haina hati ya mradi au maudhui ya mazungumzo ya faragha."
+  },
+  "This event key belongs to a different recipient.": {
+    "fr": "Cette clé d'événement appartient à un autre destinataire.",
+    "rn": "Uru rufunguzo rw'ibikorwa ni urw'uwundi wakira.",
+    "sw": "Ufunguo huu wa tukio ni wa mpokeaji mwingine."
+  },
+  "This field cannot be changed through this endpoint.": {
+    "fr": "Ce champ ne peut pas être modifié via ce point de terminaison.",
+    "rn": "Iki gice ntikishobora guhindurwa muri ubu buryo.",
+    "sw": "Sehemu hii haiwezi kubadilishwa kupitia kiungo hiki."
+  },
+  "This field cannot be changed.": {
+    "fr": "Ce champ ne peut pas être modifié.",
+    "rn": "Iki gice ntikishobora guhindurwa.",
+    "sw": "Sehemu hii haiwezi kubadilishwa."
+  },
+  "This field cannot be empty.": {
+    "fr": "Ce champ ne peut pas être vide.",
+    "rn": "Iki gice ntigishobora kuba ubusa.",
+    "sw": "Sehemu hii haiwezi kuwa tupu."
+  },
+  "This field is not allowed in organization registration.": {
+    "fr": "Ce champ n'est pas autorisé lors de l'inscription d'une organisation.",
+    "rn": "Iki gice ntikwemewe mu kwiyandikisha ishirahamwe.",
+    "sw": "Sehemu hii hairuhusiwi katika usajili wa shirika."
+  },
+  "This field is not allowed.": {
+    "fr": "Ce champ n'est pas autorisé.",
+    "rn": "Iki gice ntikwemewe.",
+    "sw": "Sehemu hii hairuhusiwi."
+  },
+  "This field is required for a personal account.": {
+    "fr": "Ce champ est requis pour un compte personnel.",
+    "rn": "Iki gice girasabwa ku konti bwite.",
+    "sw": "Sehemu hii inahitajika kwa akaunti ya kibinafsi."
+  },
+  "This file type is not permitted.": {
+    "fr": "Ce type de fichier n'est pas autorisé.",
+    "rn": "Ubwoko bw'iyi dosiye ntibwemewe.",
+    "sw": "Aina hii ya faili hairuhusiwi."
+  },
+  "This information is required before posting.": {
+    "fr": "Cette information est requise avant la publication.",
+    "rn": "Aya makuru arasabwa imbere yo gutangaza.",
+    "sw": "Taarifa hii inahitajika kabla ya kuchapisha."
+  },
+  "This invitation cannot be cancelled.": {
+    "fr": "Cette invitation ne peut pas être annulée.",
+    "rn": "Ubu butumire ntibushobora guhagarikwa.",
+    "sw": "Mwaliko huu hauwezi kughairiwa."
+  },
+  "This invitation has expired.": {
+    "fr": "Cette invitation a expiré.",
+    "rn": "Ubu butumire bwarangiye.",
+    "sw": "Mwaliko huu umeisha muda."
+  },
+  "This invitation is no longer awaiting a response.": {
+    "fr": "Cette invitation n'attend plus de réponse.",
+    "rn": "Ubu butumire ntibukitegereza igisubizo.",
+    "sw": "Mwaliko huu hautakisubiri jibu."
+  },
+  "This invitation's access has been revoked.": {
+    "fr": "L'accès à cette invitation a été révoqué.",
+    "rn": "Uburenganzira bwo kuri ubu butumire bwakuweho.",
+    "sw": "Ufikiaji wa mwaliko huu umeondolewa."
+  },
+  "This personal account has no linked person profile. Please contact support.": {
+    "fr": "Ce compte personnel n'a pas de profil de personne lié. Veuillez contacter le support.",
+    "rn": "Iyi konti bwite nta mwirondoro w'umuntu ihujwe na wo ifise. Ndagusavye uvugane n'ubufasha.",
+    "sw": "Akaunti hii ya kibinafsi haina wasifu wa mtu uliounganishwa. Tafadhali wasiliana na msaada."
+  },
+  "This project cannot accept guidance now.": {
+    "fr": "Ce projet ne peut pas accepter de conseils pour le moment.",
+    "rn": "Uyu mugambi ntushobora kwakira ubujyanama ubu.",
+    "sw": "Mradi huu hauwezi kupokea mwongozo kwa sasa."
+  },
+  "This project has no uploaded proposal. A proposal must be uploaded and prepared before posting.": {
+    "fr": "Ce projet n'a pas de proposition téléversée. Une proposition doit être téléversée et préparée avant la publication.",
+    "rn": "Uyu mugambi nta nyandiko y'umugambi yashizwe ifise. Inyandiko y'umugambi itegerezwa gushirwa no gutegurwa imbere yo gutangaza.",
+    "sw": "Mradi huu hauna pendekezo lililopakiwa. Pendekezo lazima lipakiwe na liandaliwe kabla ya kuchapishwa."
+  },
+  "This project is not accepting messages.": {
+    "fr": "Ce projet n'accepte pas de messages.",
+    "rn": "Uyu mugambi ntukira ubutumwa.",
+    "sw": "Mradi huu haupokei ujumbe."
+  },
+  "This project page is temporarily unavailable.": {
+    "fr": "Cette page de projet est temporairement indisponible.",
+    "rn": "Uru rupapuro rw'umugambi ntiruboneka ubu.",
+    "sw": "Ukurasa huu wa mradi haupatikani kwa sasa."
+  },
+  "This proposal is not marked as the current prepared version.": {
+    "fr": "Cette proposition n'est pas marquée comme la version préparée actuelle.",
+    "rn": "Iyi nyandiko y'umugambi ntiyanditswe nk'isohoka iteguwe ubu.",
+    "sw": "Pendekezo hili halijawekwa alama kama toleo la sasa lililoandaliwa."
+  },
+  "This refresh token does not belong to your account.": {
+    "fr": "Ce jeton de rafraîchissement n'appartient pas à votre compte.",
+    "rn": "Iki kimenyetso co kuvugurura ntic'ikonti yawe.",
+    "sw": "Tokeni hii ya kusasisha si ya akaunti yako."
+  },
+  "This registration does not exist or has already been verified.": {
+    "fr": "Cette inscription n'existe pas ou a déjà été vérifiée.",
+    "rn": "Uku kwiyandikisha ntikubaho canke kwaramaze kwemezwa.",
+    "sw": "Usajili huu haupo au tayari umethibitishwa."
+  },
+  "This registration has an invalid account type.": {
+    "fr": "Cette inscription a un type de compte invalide.",
+    "rn": "Uku kwiyandikisha kufise ubwoko bw'ikonti butakwiye.",
+    "sw": "Usajili huu una aina ya akaunti isiyo sahihi."
+  },
+  "This requirement belongs to a different professional profile type.": {
+    "fr": "Cette exigence appartient à un autre type de profil professionnel.",
+    "rn": "Iyi ntunganyo ni iy'ubundi bwoko bw'umwirondoro w'umwuga.",
+    "sw": "Mahitaji haya ni ya aina nyingine ya wasifu wa kitaalamu."
+  },
+  "This send identifier was already used for a different message.": {
+    "fr": "Cet identifiant d'envoi a déjà été utilisé pour un autre message.",
+    "rn": "Iki kimenyetso co kuhereza caramaze gukoreshwa ku bundi butumwa.",
+    "sw": "Kitambulisho hiki cha kutuma tayari kilitumika kwa ujumbe mwingine."
+  },
+  "This verification code has expired. Request a new code.": {
+    "fr": "Ce code de vérification a expiré. Demandez un nouveau code.",
+    "rn": "Iyi kode yo kwemeza yarangiye. Saba kode nshasha.",
+    "sw": "Msimbo huu wa uthibitishaji umeisha muda. Omba msimbo mpya."
+  },
+  "Too many incorrect attempts. Request a new code.": {
+    "fr": "Trop de tentatives incorrectes. Demandez un nouveau code.",
+    "rn": "Ugerageza kwinshi kutari kwo. Saba kode nshasha.",
+    "sw": "Majaribio mengi yasiyo sahihi. Omba msimbo mpya."
+  },
+  "Total budget must equal requested funding plus own contribution.": {
+    "fr": "Le budget total doit être égal au financement demandé plus la contribution propre.",
+    "rn": "Ingengo y'imari yose itegerezwa kungana n'inkunga yasabwe hamwe n'umusanzu wawe bwite.",
+    "sw": "Bajeti jumla lazima iwe sawa na ufadhili ulioombwa pamoja na mchango wako mwenyewe."
+  },
+  "Unable to log in with those credentials.": {
+    "fr": "Impossible de se connecter avec ces identifiants.",
+    "rn": "Ntibishobotse kwinjira n'ivyo bimenyetso.",
+    "sw": "Imeshindwa kuingia na vitambulisho hivyo."
+  },
+  "Unsupported notification target.": {
+    "fr": "Cible de notification non prise en charge.",
+    "rn": "Icyo imenyesha igendeye kitemewe.",
+    "sw": "Lengo la arifa lisilotumika."
+  },
+  "Unsupported notification type.": {
+    "fr": "Type de notification non pris en charge.",
+    "rn": "Ubwoko bw'imenyesha butemewe.",
+    "sw": "Aina ya arifa isiyotumika."
+  },
+  "Use an opportunity or call detail page to inspect official information.": {
+    "fr": "Utilisez une page de détail d'opportunité ou d'appel pour consulter les informations officielles.",
+    "rn": "Koresha urupapuro rw'amakuru y'amahirwe canke ubutumire kugira urabe amakuru yemewe.",
+    "sw": "Tumia ukurasa wa maelezo ya fursa au wito kukagua taarifa rasmi."
+  },
+  "Use no more than {} characters.": {
+    "fr": "N'utilisez pas plus de {} caractères.",
+    "rn": "Ntukoreshe inyuguti zirenga {}.",
+    "sw": "Usitumie zaidi ya herufi {}."
+  },
+  "Use only letters, spaces, apostrophes, or hyphens in the {}.": {
+    "fr": "Utilisez uniquement des lettres, des espaces, des apostrophes ou des traits d'union dans le {}.",
+    "rn": "Koresha gusa inyuguti, imyanya, utwago canke utubazo mu {}.",
+    "sw": "Tumia herufi, nafasi, alama za juu au viungo pekee katika {}."
+  },
+  "Use uppercase, lowercase, number, and symbol characters.": {
+    "fr": "Utilisez des majuscules, des minuscules, des chiffres et des symboles.",
+    "rn": "Koresha inyuguti nkuru, inyuguti nto, inimero n'ibimenyetso.",
+    "sw": "Tumia herufi kubwa, herufi ndogo, namba na alama."
+  },
+  "Verify your Global Opportunities account": {
+    "fr": "Vérifiez votre compte Global Opportunities",
+    "rn": "Emeza ikonti yawe ya Global Opportunities",
+    "sw": "Thibitisha akaunti yako ya Global Opportunities"
+  },
+  "Verify your login email before requesting a professional profile.": {
+    "fr": "Vérifiez votre e-mail de connexion avant de demander un profil professionnel.",
+    "rn": "Emeza imeyili yawe yo kwinjira imbere yo gusaba umwirondoro w'umwuga.",
+    "sw": "Thibitisha barua pepe yako ya kuingia kabla ya kuomba wasifu wa kitaalamu."
+  },
+  "We could not send the recovery email right now. Please try again later.": {
+    "fr": "Nous n'avons pas pu envoyer l'e-mail de récupération pour le moment. Veuillez réessayer plus tard.",
+    "rn": "Ntitwashoboye kuhereza imeyili yo kugarura ubu. Ndagusavye ugerageze ukundi nyuma.",
+    "sw": "Hatukuweza kutuma barua pepe ya urejeshaji kwa sasa. Tafadhali jaribu tena baadaye."
+  },
+  "We could not send the verification email right now. Please try again later.": {
+    "fr": "Nous n'avons pas pu envoyer l'e-mail de vérification pour le moment. Veuillez réessayer plus tard.",
+    "rn": "Ntitwashoboye kuhereza imeyili yo kwemeza ubu. Ndagusavye ugerageze ukundi nyuma.",
+    "sw": "Hatukuweza kutuma barua pepe ya uthibitishaji kwa sasa. Tafadhali jaribu tena baadaye."
+  },
+  "We could not send the verification email right now. Please try registering again later.": {
+    "fr": "Nous n'avons pas pu envoyer l'e-mail de vérification pour le moment. Veuillez réessayer de vous inscrire plus tard.",
+    "rn": "Ntitwashoboye kuhereza imeyili yo kwemeza ubu. Ndagusavye ugerageze kwiyandikisha ukundi nyuma.",
+    "sw": "Hatukuweza kutuma barua pepe ya uthibitishaji kwa sasa. Tafadhali jaribu kujisajili tena baadaye."
+  },
+  "You are not a participant in this conversation.": {
+    "fr": "Vous ne participez pas à cette conversation.",
+    "rn": "Nturi uwugira uruhara muri iki kiganiro.",
+    "sw": "Wewe si mshiriki wa mazungumzo haya."
+  },
+  "You cannot invite yourself.": {
+    "fr": "Vous ne pouvez pas vous inviter vous-même.",
+    "rn": "Ntushobora kwitumira wewe nyene.",
+    "sw": "Huwezi kujialika mwenyewe."
+  },
+  "You must be at least 16 years old.": {
+    "fr": "Vous devez avoir au moins 16 ans.",
+    "rn": "Ugomba kuba ufise nibura imyaka 16.",
+    "sw": "Lazima uwe na umri wa angalau miaka 16."
+  },
+  "Your account must be active before requesting a professional profile.": {
+    "fr": "Votre compte doit être actif avant de demander un profil professionnel.",
+    "rn": "Ikonti yawe itegerezwa kuba ikora imbere yo gusaba umwirondoro w'umwuga.",
+    "sw": "Akaunti yako lazima iwe inatumika kabla ya kuomba wasifu wa kitaalamu."
+  },
+  "Your active profile changed after this draft was created. Create a new update or switch request.": {
+    "fr": "Votre profil actif a changé après la création de ce brouillon. Créez une nouvelle demande de mise à jour ou de changement.",
+    "rn": "Umwirondoro wawe ukora wahindutse inyuma y'uko iyi nyandiko y'agateganyo ishizweho. Fungura igisabwa gishasha co kuvugurura canke co guhindura.",
+    "sw": "Wasifu wako unaotumika umebadilika baada ya rasimu hii kuundwa. Unda ombi jipya la kusasisha au la kubadilisha."
+  },
+  "Your password has been reset successfully. You can now log in with your new password.": {
+    "fr": "Votre mot de passe a été réinitialisé avec succès. Vous pouvez maintenant vous connecter avec votre nouveau mot de passe.",
+    "rn": "Ijambo ry'ibanga ryawe ryagaruriwe neza. Ushobora ubu kwinjira n'ijambo ry'ibanga rishasha.",
+    "sw": "Nenosiri lako limewekwa upya kwa mafanikio. Sasa unaweza kuingia na nenosiri lako jipya."
+  },
+  "Your project was not posted.\n\n{reasons}\n\nYour saved project information remains available. Proposal preparation must complete successfully before posting.": {
+    "fr": "Votre projet n'a pas été publié.\n\n{reasons}\n\nLes informations enregistrées de votre projet restent disponibles. La préparation de la proposition doit réussir avant la publication.",
+    "rn": "Umugambi wawe ntiwatangajwe.\n\n{reasons}\n\nAmakuru y'umugambi wabitswe aracariho. Itegurwa ry'inyandiko y'umugambi ritegerezwa kurangira neza imbere yo gutangaza.",
+    "sw": "Mradi wako haukuchapishwa.\n\n{reasons}\n\nTaarifa za mradi wako zilizohifadhiwa bado zinapatikana. Utayarishaji wa pendekezo lazima ukamilike kwa mafanikio kabla ya kuchapisha."
+  },
+  "first name": {
+    "fr": "prénom",
+    "rn": "izina rya mbere",
+    "sw": "jina la kwanza"
+  },
+  "last name": {
+    "fr": "nom de famille",
+    "rn": "izina ry'umuryango",
+    "sw": "jina la ukoo"
+  },
+  "PDF upload": {
+    "fr": "téléversement du PDF",
+    "rn": "gushira PDF",
+    "sw": "kupakia PDF"
+  },
+  "project domain": {
+    "fr": "domaine du projet",
+    "rn": "ikigo c'igikorwa c'umugambi",
+    "sw": "kikoa cha mradi"
+  },
+  "description and funding": {
+    "fr": "description et financement",
+    "rn": "ibisobanuro n'inkunga",
+    "sw": "maelezo na ufadhili"
+  },
+  "Expert invitation": {
+    "fr": "invitation d'expert",
+    "rn": "ubutumire bw'umuhanga",
+    "sw": "mwaliko wa mtaalam"
+  },
+  "personal information": {
+    "fr": "informations personnelles",
+    "rn": "amakuru bwite",
+    "sw": "taarifa za kibinafsi"
+  },
+  "review and post": {
+    "fr": "vérification et publication",
+    "rn": "gusuzuma no gutangaza",
+    "sw": "ukaguzi na uchapishaji"
+  },
+  "The project content is not ready for protected reading. Security checks and page preparation must complete first.": {
+    "fr": "Le contenu du projet n'est pas prêt pour une lecture protégée. Les contrôles de sécurité et la préparation des pages doivent d'abord se terminer.",
+    "rn": "Ibirimwo mu mugambi ntibiteguye gusomwa mu buryo burinzwe. Igenzura ry'umutekano n'itegurwa ry'amapapuro bitegerezwa kubanza kurangira.",
+    "sw": "Maudhui ya mradi hayako tayari kwa usomaji uliolindwa. Ukaguzi wa usalama na utayarishaji wa kurasa lazima vikamilike kwanza."
+  }
+}

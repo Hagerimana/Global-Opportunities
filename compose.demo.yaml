@@ -1,0 +1,155 @@
+name: global-opportunities-demo
+
+x-backend: &backend
+  image: global-opportunities-backend:local-demo
+  build:
+    context: ./backend
+  init: true
+  environment: &backend-env
+    DJANGO_SETTINGS_MODULE: config.settings_docker
+    DOCKER_DEMO_ONLY: "true"
+    DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?Set DJANGO_SECRET_KEY in .env.docker}
+    DJANGO_DEBUG: "false"
+    DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1,backend
+    POSTGRES_HOST: db
+    POSTGRES_PORT: "5432"
+    POSTGRES_DB: global_opportunities_demo
+    POSTGRES_USER: demo
+    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env.docker}
+    REDIS_URL: redis://redis:6379/0
+    EMAIL_HOST_USER: ${EMAIL_HOST_USER:?Set EMAIL_HOST_USER in .env.docker}
+    EMAIL_HOST_PASSWORD: ${EMAIL_HOST_PASSWORD:?Set EMAIL_HOST_PASSWORD in .env.docker}
+    DEFAULT_FROM_EMAIL: ${EMAIL_HOST_USER:?Set EMAIL_HOST_USER in .env.docker}
+    FRONTEND_BASE_URL: http://localhost:13000
+    FRONTEND_ORIGIN: "http://localhost:13000,http://127.0.0.1:13000"
+  volumes:
+    - private-data:/data/private
+    - media-data:/data/media
+    - static-data:/data/static
+    - scanner-data:/data/clamav:ro
+
+services:
+  db:
+    image: postgres:17-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: global_opportunities_demo
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env.docker}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U demo -d global_opportunities_demo"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  redis:
+    image: redis:7-bookworm
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  release:
+    <<: *backend
+    restart: "no"
+    command: ["sh", "/app/docker/release.sh"]
+    depends_on:
+      db:
+        condition: service_healthy
+
+  scanner-init:
+    <<: *backend
+    restart: "no"
+    command: ["freshclam", "--config-file=/app/docker/freshclam.conf", "--stdout"]
+    volumes:
+      - scanner-data:/data/clamav
+
+  scanner-updater:
+    <<: *backend
+    restart: unless-stopped
+    command: ["freshclam", "--config-file=/app/docker/freshclam.conf", "--daemon", "--foreground", "--stdout"]
+    volumes:
+      - scanner-data:/data/clamav
+    depends_on:
+      scanner-init:
+        condition: service_completed_successfully
+
+  backend:
+    <<: *backend
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:18000:8000"
+    depends_on:
+      release:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://backend:8000/admin/login/', timeout=5)"]
+      interval: 15s
+      timeout: 8s
+      retries: 10
+      start_period: 30s
+
+  worker:
+    <<: *backend
+    restart: unless-stopped
+    command: ["celery", "-A", "config", "worker", "--loglevel=INFO", "--concurrency=1", "--queues=celery,project_content"]
+    depends_on:
+      release:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+      scanner-init:
+        condition: service_completed_successfully
+
+  beat:
+    <<: *backend
+    restart: unless-stopped
+    command: ["celery", "-A", "config", "beat", "--loglevel=INFO", "--schedule=/data/beat/celerybeat-schedule"]
+    volumes:
+      - beat-data:/data/beat
+    depends_on:
+      release:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        DJANGO_API_URL: http://backend:8000/api
+    init: true
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      HOSTNAME: 0.0.0.0
+      PORT: "3000"
+    ports:
+      - "127.0.0.1:13000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 20s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+
+volumes:
+  postgres-data:
+  redis-data:
+  private-data:
+  media-data:
+  static-data:
+  scanner-data:
+  beat-data:

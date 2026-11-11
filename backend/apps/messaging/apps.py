@@ -1,0 +1,9 @@
+"""Application configuration for private project conversations."""
+
+from django.apps import AppConfig
+
+
+class MessagingConfig(AppConfig):
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "apps.messaging"
+    verbose_name = "Private messaging"

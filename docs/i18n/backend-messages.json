@@ -1,0 +1,239 @@
+{
+  "generated_by": "backend/tools/i18n_inventory.py",
+  "total": 33,
+  "files": [
+    {
+      "file": "apps/accounts/models.py",
+      "strings": [
+        {
+          "line": 36,
+          "kind": "raise ValueError",
+          "text": "An email address is required",
+          "source": "raise ValueError(\"An email address is required\")"
+        },
+        {
+          "line": 54,
+          "kind": "raise ValueError",
+          "text": "An email address is required",
+          "source": "raise ValueError(\"An email address is required\")"
+        },
+        {
+          "line": 64,
+          "kind": "raise ValueError",
+          "text": "Superuser must have is_staff=True.",
+          "source": "raise ValueError(\"Superuser must have is_staff=True.\")"
+        },
+        {
+          "line": 67,
+          "kind": "raise ValueError",
+          "text": "Superuser must have is_superuser=True.",
+          "source": "raise ValueError(\"Superuser must have is_superuser=True.\")"
+        }
+      ]
+    },
+    {
+      "file": "apps/documents/storage.py",
+      "strings": [
+        {
+          "line": 23,
+          "kind": "raise ValueError",
+          "text": "Private documents do not have public URLs. Use an authorized document-viewing endpoint.",
+          "source": "\"Private documents do not have public URLs. \""
+        }
+      ]
+    },
+    {
+      "file": "apps/funding/admin.py",
+      "strings": [
+        {
+          "line": 76,
+          "kind": "raise forms.ValidationError",
+          "text": "Enter a three-letter currency code.",
+          "source": "raise forms.ValidationError(\"Enter a three-letter currency code.\")"
+        },
+        {
+          "line": 233,
+          "kind": "raise PermissionDenied",
+          "text": "This award can no longer be edited through the pending-award approval screen.",
+          "source": "\"This award can no longer be edited through \""
+        }
+      ]
+    },
+    {
+      "file": "apps/professional_profiles/models.py",
+      "strings": [
+        {
+          "line": 414,
+          "kind": "models.SlugField(help_text=)",
+          "text": "Stable identifier, for example CV or PROOF_OF_EXPERIENCE.",
+          "source": "help_text=\"Stable identifier, for example CV or PROOF_OF_EXPERIENCE.\","
+        },
+        {
+          "line": 460,
+          "kind": "models.PositiveBigIntegerField(help_text=)",
+          "text": "Maximum permitted file size in bytes.",
+          "source": "help_text=\"Maximum permitted file size in bytes.\","
+        },
+        {
+          "line": 467,
+          "kind": "models.BooleanField(help_text=)",
+          "text": "Whether an authorized reviewer may grant a documented exception.",
+          "source": "help_text=(\"Whether an authorized reviewer may grant a documented exception.\"),"
+        }
+      ]
+    },
+    {
+      "file": "apps/projects/proposal_processing.py",
+      "strings": [
+        {
+          "line": 32,
+          "kind": "raise ProposalProcessingError",
+          "text": "Scanner executable was not found.",
+          "source": "raise ProposalProcessingError(\"Scanner executable was not found.\")"
+        },
+        {
+          "line": 35,
+          "kind": "raise ProposalProcessingError",
+          "text": "Scanner database directory was not found.",
+          "source": "raise ProposalProcessingError(\"Scanner database directory was not found.\")"
+        },
+        {
+          "line": 66,
+          "kind": "raise ProposalProcessingError",
+          "text": "Scanner reported an error; proposal remains blocked.",
+          "source": "\"Scanner reported an error; proposal remains blocked.\""
+        },
+        {
+          "line": 105,
+          "kind": "raise ProposalProcessingError",
+          "text": "Page rendering failed. Check the file and rendering limits.",
+          "source": "\"Page rendering failed. Check the file and rendering limits.\""
+        },
+        {
+          "line": 121,
+          "kind": "raise ProposalProcessingError",
+          "text": "Invalid rendered page count.",
+          "source": "raise ProposalProcessingError(\"Invalid rendered page count.\")"
+        },
+        {
+          "line": 56,
+          "kind": "raise ProposalProcessingError",
+          "text": "Scanner timed out; proposal remains blocked.",
+          "source": "\"Scanner timed out; proposal remains blocked.\""
+        },
+        {
+          "line": 59,
+          "kind": "raise ProposalProcessingError",
+          "text": "Scanner could not be started.",
+          "source": "raise ProposalProcessingError(\"Scanner could not be started.\") from exc"
+        },
+        {
+          "line": 99,
+          "kind": "raise ProposalProcessingError",
+          "text": "Page rendering timed out.",
+          "source": "raise ProposalProcessingError(\"Page rendering timed out.\") from exc"
+        },
+        {
+          "line": 101,
+          "kind": "raise ProposalProcessingError",
+          "text": "Page renderer could not be started.",
+          "source": "raise ProposalProcessingError(\"Page renderer could not be started.\") from exc"
+        },
+        {
+          "line": 115,
+          "kind": "raise ProposalProcessingError",
+          "text": "Renderer did not produce a valid manifest.",
+          "source": "\"Renderer did not produce a valid manifest.\""
+        },
+        {
+          "line": 133,
+          "kind": "raise ProposalProcessingError",
+          "text": "Rendered pages are incomplete or invalid.",
+          "source": "raise ProposalProcessingError(\"Rendered pages are incomplete or invalid.\")"
+        },
+        {
+          "line": 345,
+          "kind": "raise ProposalProcessingError",
+          "text": "Proposal preparation failed. Check the stored original, database, and private storage.",
+          "source": "\"Proposal preparation failed. \""
+        },
+        {
+          "line": 167,
+          "kind": "raise ProposalProcessingError",
+          "text": "This project has no uploaded proposal.",
+          "source": "\"This project has no uploaded proposal.\""
+        },
+        {
+          "line": 240,
+          "kind": "raise ProposalProcessingError",
+          "text": "The stored proposal is empty.",
+          "source": "raise ProposalProcessingError(\"The stored proposal is empty.\")"
+        },
+        {
+          "line": 246,
+          "kind": "raise ProposalProcessingError",
+          "text": "Scanner raised a threat or scan-limit alert. The proposal remains blocked.",
+          "source": "\"Scanner raised a threat or scan-limit alert. \""
+        },
+        {
+          "line": 233,
+          "kind": "raise ProposalProcessingError",
+          "text": "Proposal exceeds the upload-size limit.",
+          "source": "\"Proposal exceeds the upload-size limit.\""
+        }
+      ]
+    },
+    {
+      "file": "apps/projects/public_views.py",
+      "strings": [
+        {
+          "line": 192,
+          "kind": "raise ValueError",
+          "text": "Image exceeds configured reader limit",
+          "source": "raise ValueError(\"Image exceeds configured reader limit\")"
+        }
+      ]
+    },
+    {
+      "file": "apps/projects/render_worker.py",
+      "strings": [
+        {
+          "line": 103,
+          "kind": "raise ValueError",
+          "text": "Expected source, output directory, and limits.",
+          "source": "raise ValueError(\"Expected source, output directory, and limits.\")"
+        },
+        {
+          "line": 27,
+          "kind": "raise ValueError",
+          "text": "Page count exceeds reader limits.",
+          "source": "raise ValueError(\"Page count exceeds reader limits.\")"
+        },
+        {
+          "line": 45,
+          "kind": "raise ValueError",
+          "text": "Invalid page dimensions.",
+          "source": "raise ValueError(\"Invalid page dimensions.\")"
+        },
+        {
+          "line": 52,
+          "kind": "raise ValueError",
+          "text": "Page exceeds reader image limits.",
+          "source": "raise ValueError(\"Page exceeds reader image limits.\")"
+        },
+        {
+          "line": 57,
+          "kind": "raise ValueError",
+          "text": "Document exceeds total image limits.",
+          "source": "raise ValueError(\"Document exceeds total image limits.\")"
+        },
+        {
+          "line": 77,
+          "kind": "raise ValueError",
+          "text": "Rendered output exceeds storage limits.",
+          "source": "raise ValueError(\"Rendered output exceeds storage limits.\")"
+        }
+      ]
+    }
+  ]
+}

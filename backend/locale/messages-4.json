@@ -1,0 +1,62 @@
+{
+  "You have received a project Expert invitation": {
+    "fr": "Vous avez reçu une invitation d'expert pour un projet",
+    "rn": "Waronse ubutumire bw'umuhanga ku mugambi",
+    "sw": "Umepokea mwaliko wa mtaalam wa mradi"
+  },
+  "A project owner has invited you to provide Expert guidance. Sign in to review the invitation and respond.": {
+    "fr": "Un propriétaire de projet vous a invité à fournir des conseils d'expert. Connectez-vous pour examiner l'invitation et répondre.",
+    "rn": "Uwatanze umugambi yagutumiriye gutanga ubujyanama bw'umuhanga. Injira kugira urabe ubutumire kandi wishure.",
+    "sw": "Mmiliki wa mradi amekualika kutoa mwongozo wa kitaalamu. Ingia kukagua mwaliko na kujibu."
+  },
+  "Your Expert invitation was accepted": {
+    "fr": "Votre invitation d'expert a été acceptée",
+    "rn": "Ubutumire bwawe bw'umuhanga bwemewe",
+    "sw": "Mwaliko wako wa mtaalam umekubaliwa"
+  },
+  "The invited Expert accepted your project invitation. Sign in to view the invitation details.": {
+    "fr": "L'expert invité a accepté votre invitation de projet. Connectez-vous pour voir les détails de l'invitation.",
+    "rn": "Umuhanga yatumiwe yemeye ubutumire bw'umugambi wawe. Injira kugira urabe amakuru arambuye y'ubutumire.",
+    "sw": "Mtaalam aliyealikwa amekubali mwaliko wako wa mradi. Ingia kuona maelezo ya mwaliko."
+  },
+  "Your Expert invitation was declined": {
+    "fr": "Votre invitation d'expert a été refusée",
+    "rn": "Ubutumire bwawe bw'umuhanga bwanse",
+    "sw": "Mwaliko wako wa mtaalam umekataliwa"
+  },
+  "The invited Expert declined your project invitation. Sign in to review the invitation.": {
+    "fr": "L'expert invité a refusé votre invitation de projet. Connectez-vous pour examiner l'invitation.",
+    "rn": "Umuhanga yatumiwe yanse ubutumire bw'umugambi wawe. Injira kugira urabe ubutumire.",
+    "sw": "Mtaalam aliyealikwa amekataa mwaliko wako wa mradi. Ingia kukagua mwaliko."
+  },
+  "A project Expert invitation was cancelled": {
+    "fr": "Une invitation d'expert de projet a été annulée",
+    "rn": "Ubutumire bw'umuhanga ku mugambi bwahagaritswe",
+    "sw": "Mwaliko wa mtaalam wa mradi umeshairiwa"
+  },
+  "The project owner cancelled an Expert invitation. Its invitation-based document access has been revoked.": {
+    "fr": "Le propriétaire du projet a annulé une invitation d'expert. L'accès aux documents lié à l'invitation a été révoqué.",
+    "rn": "Uwatanze umugambi yahagaritse ubutumire bw'umuhanga. Uburenganzira bwo kuronka inyandiko bushingiye ku butumire bwakuweho.",
+    "sw": "Mmiliki wa mradi ameghairi mwaliko wa mtaalam. Ufikiaji wa nyaraka unaotokana na mwaliko umeondolewa."
+  },
+  "Your Expert invitation expired": {
+    "fr": "Votre invitation d'expert a expiré",
+    "rn": "Ubutumire bwawe bw'umuhanga bwarangiye",
+    "sw": "Mwaliko wako wa mtaalam umeisha muda"
+  },
+  "An Expert invitation passed its response deadline. Sign in to review it and decide whether to invite again.": {
+    "fr": "Une invitation d'expert a dépassé son délai de réponse. Connectez-vous pour l'examiner et décider si vous souhaitez inviter à nouveau.",
+    "rn": "Ubutumire bw'umuhanga bwarengeye itariki ntarengwa yo kwishura. Injira kugira uburebe kandi uhitamwo ko wongera gutumira.",
+    "sw": "Mwaliko wa mtaalam umepita muda wake wa kujibu. Ingia kukagua na kuamua kama utaalika tena."
+  },
+  "You have a new private project message": {
+    "fr": "Vous avez un nouveau message privé de projet",
+    "rn": "Ufise ubutumwa bushasha bwite bw'umugambi",
+    "sw": "Una ujumbe mpya wa faragha wa mradi"
+  },
+  "A participant sent you a private project message. Sign in to your account to read it.": {
+    "fr": "Un participant vous a envoyé un message privé de projet. Connectez-vous à votre compte pour le lire.",
+    "rn": "Uwugira uruhara yagutumye ubutumwa bwite bw'umugambi. Injira mu konti yawe kugira ubusome.",
+    "sw": "Mshiriki amekutumia ujumbe wa faragha wa mradi. Ingia kwenye akaunti yako kuusoma."
+  }
+}

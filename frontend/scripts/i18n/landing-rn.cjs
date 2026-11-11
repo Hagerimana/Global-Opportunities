@@ -1,0 +1,464 @@
+/**
+ * Landing-page catalogue additions -- Kirundi (rn).
+ *
+ * Genuine Kirundi, deliberately not Kinyarwanda:
+ *   - `canke` (not `cyangwa`), `ic-`/`ivy-` noun classes (not `icy-`/`iby-`),
+ *     `cane` (not `cyane`), `Ndagusavye` (not `Nyamuneka`).
+ *   - Possessives follow the noun class and the catalogue convention (`-iwe`
+ *     for the addressee, as used throughout `messages/rn`).
+ *
+ * Keys and array positions mirror `landing-en.cjs`; fr/rn/sw must stay
+ * index-aligned with it.
+ */
+module.exports = {
+  landing: {
+    nav: {
+      homeAria: "Global Opportunities, ahabanza",
+      logoutFailed:
+        "Gusohoka ntivyashobotse kurangira. Ongera ugerageze canke usibe ikiringo c'ukwinjira c'iyi mushashari.",
+      logoutRecoveryNote:
+        "Gusiba ikiringo c'ukwinjira c'iyi mushashari birakuraho utweme twabitswe, ariko ntibyemeza ko uburenganzira bwo kuvugurura bwakuwe kuri server.",
+      retryLogout: "Ongera ugerageze gusohoka",
+      clearSession: "Siba ikiringo c'ukwinjira c'iyi mushashari",
+      dismiss: "Kureka",
+    },
+
+    hero: {
+      description:
+        "Global Opportunities ihuriza hamwe amahirwe y'imfashanyo, amatangazo y'imigambi, ibibazo, isuzuma, ugutanga imfashanyo n'ukurikirana ubwishuru mu kibanza c'akazi kimwe gitekanye kandi gikoreshwa mu ndimi nyinshi. Uwufise umugambi aronka itangazo, ategura umugambi ahuza n'ibisabwa vyayo nyakuri, arasaba, hanyuma akurikirana imfashanyo gushika ku nzira y'ugutanga — ata gutakaza inzira mu masanduku menshi y'ubutumwa.",
+      stepProgress: "Intambwe {step} kuri {total}",
+      mock: {
+        amount: "12k - 60k USD",
+        documentsReady: "Ibandiko 3 vyiteguye",
+        documentsList: "Iyandikwa · Integuro y'akazi · Ingengo y'imari",
+        trancheReleased: "Igice ca 1 catanzwe",
+        trancheAmount: "USD 16 000 kuri 48 000",
+        askAi: "Baza umufasha wa AI ivyo iri tangazo rikeneye",
+      },
+    },
+
+    trust: {
+      description:
+        "Inimero zose ziri hejuru zerekana urubuga nk'uko rwubatswe uyu munsi. Nta kimwe ari inimero z'abayikoresha, kuko ata makuru y'ukoresha yagenzuwe arahari.",
+      assurance:
+        "Umutekano usobanurwa n'ivyo urubuga rukora — ikiringo c'ukwinjira gishingiye ku tweme, ibandiko bijanye n'umugambi, uburenganzira bushingiye ku nshingano — atari ku bimenyetso bitarahawe.",
+      details: [
+        "Urutonde rw'urubuga mu ndimi zine: icongereza, igifaransa, ikirundi n'ikiswahili.",
+        "Menya ukoresheje Monitor — urugendo rwose kuva ku mahirwe gushika ku ngaruka.",
+        "Ibice vy'akazi vyishura amatangazo, imigambi, ibibazo, imfashanyo n'ibandiko.",
+        "Inshingano z'abafatanyi urubuga rwubakiye, kuva ku musaba gushika ku muyobozi.",
+      ],
+      signalDetails: {
+        auth: "Ibimenyetso vy'ukwinjira bihindurwa mu tweme two gukoresha igihe gito, kandi nta kiringo kibikwa mu rupapuro.",
+        docs: "Buri dosiye yashizwe ifise ubwoko n'ikigero c'isuzuma, kugira ngo aho igereze haboneke ku mpande zose.",
+        notifications:
+          "Amatariki aheruka, ingingo n'ikigero c'ibandiko bitanga imenyesha n'ivyifuzo kuri buri mukoresha.",
+        structure:
+          "Ibibazo, ingingo n'ubwishuru ni inyandiko ziteguye, atari amafishiye mu butumwa.",
+      },
+    },
+
+    discovery: {
+      description:
+        "Amahirwe y'imfashanyo n'amatangazo y'imigambi biri mu rutonde rumwe. Hitamwo ku bwoko, ishami, aho biri n'ikigero, hanyuma ufungure itangazo kugira ubone ibisabwa vy'ukwemerwa n'ibandiko risaba.",
+    },
+
+    features: {
+      description:
+        "Gushakisha ni aho uwufise umugambi atangurira. Ibikurikira vyose — gutegura umugambi, gusaba, gusuzumwa, guhabwa imfashanyo, kwishurwa no kwerekana icahindutse — bikorwa kuri iyo nyandiko imwe aho kuba mu buryo bushasha buri gihe.",
+      details: [
+        "Urutonde rumwe rushakishwa rw'amahirwe y'imfashanyo n'amatangazo, ruhitamwo ku bwoko, ishami, aho biri n'ikigero.",
+        "Inyandiko y'umugambi iteguye ifise intego, ibisubizo, ingengo y'imari n'ibandiko, kugira ngo umugambi utegurwe rimwe gusa kandi ukoreshwe kenshi.",
+        "Ibibazo bifise ikigero n'amateka, kugira ngo umusaba amenye igihe ihinduka ryiwe rigereye.",
+        "Ibisabwa biteguye, isuzuma ryatanzwe n'ingingo yanditswe, kugira ngo uguhitamo gusobanuke aho kuba mu mwijima.",
+        "Imfashanyo yatanzwe n'igice cose catanzwe bikurikiranwa ku mugambi, n'igice gikurikira kigaragara.",
+        "Ubwishuru bwanditswe ku gice catanzwe, butanga ku mpande zose iyerekwa rimwe ry'ivyishuwe n'ibitarishurwa.",
+        "Ibandiko bishizwe rimwe, bishizwe mu bwoko, kandi bisangirwa gusa n'abafatanyabikorwa bajanye n'umugambi.",
+        "Ivyibutsa vy'itariki iheruka, imenyesha y'ingingo n'ikigero c'ibandiko bigera ku bantu babikeneye.",
+        "Inyishu zisobanutse ku mahirwe, ku bisabwa vy'ukwemerwa no ku bandiko — zishingiye ku makuru yemewe.",
+      ],
+    },
+
+    showcase: {
+      description:
+        "Buri rupapuro ruri hepfo rwakozwe mu bice bimwe nk'uru rupapuro. Igihinduka hagati yavyo ni umufatanyi: umusaba arondera amatangazo, uwufise umugambi acunga ugutanga, uwutanga imfashanyo akurikirana impfashanyo yatanzwe.",
+      mock: {
+        search: "kwihangana",
+        meta: ["Rifunga ku wa 15 Gitugutu", "Rifunga ku wa 18 Kigarama", "Rifungura ku wa 01 Munyonyo"],
+        deltas: [
+          "+1 uku kwezi",
+          "2 zirindiriye isuzuma",
+          "USD, ku migambi 3",
+          "4 zikeneye kwitwararikwa",
+        ],
+        activity: [
+          "Ikibazo catanzwe",
+          "Ibandiko ry'ingengo y'imari ryasubijwe",
+          "Ikibazo c'umugenzuzi carashuwe",
+          "Ivyibutsa vy'itariki iheruka vyoherejwe",
+        ],
+        when: ["Amasaha 2 ahaheze", "Ejo", "Iminsi 3 ihaheze", "Iminsi 5 ihaheze"],
+        applicationTitles: [
+          "Kugarura ahantu amazi akomoka",
+          "Amashirahamwe y'abanyeshure n'imirwi y'inyigisho",
+          "Uguhuza interineti mu ntara",
+        ],
+        funders: [
+          "Umufatanyabikorwa w'imfashanyo w'ingero",
+          "Sekiretariya y'umugambi w'ingero",
+          "Ikigega c'ikoranabuhanga c'ingero",
+        ],
+        amounts: ["USD 16 000", "USD 16 000", "USD 16 000"],
+        totalAwarded: "USD 48 000",
+        disbursed: "USD 24 000",
+        paymentDates: ["12 Kanama 2026", "04 Nzeli 2026"],
+        paymentAmounts: ["USD 16 000", "USD 8 000"],
+      },
+    },
+
+    how: {
+      description:
+        "Buri rupapuro, imenyesha n'uburenganzira mu rubuga bihura n'imwe muri izi ntambwe icenda. Ni co gituma umugambi, ikibazo cawo, imfashanyo yawo n'ivyerekanwa vyawo bisobanura ikintu kimwe.",
+      details: [
+        "Shakisha mu rutonde rw'amatangazo afunguye hanyuma uhitamwo ayo ahuye n'ishami, aho biri n'itariki iheruka.",
+        "Soma incamake, ibisabwa vy'ukwemerwa, ibandiko bisabwa n'itariki iheruka kuri buri tangazo wahisemwo.",
+        "Tegura inyandiko y'umugambi: intego, ibisubizo bitegerejwe, ingengo y'imari, itsinda n'ibandiko bishigikira.",
+        "Tanga umugambi ku itangazo. Ikibazo cakira ibandiko vy'umugambi aho kubisaba ukundi.",
+        "Isuzuma rikorwa ku bisabwa biteguye, kandi buri suzuma ryandikwa ku nshingano yaryo.",
+        "Ingingo y'uguhitamo yandikwa ku kibazo kandi impande zose ziramenyeshwa.",
+        "Imfashanyo yatanzwe ijangwa ku mugambi hamwe n'urugendo rw'ugutanga igice umusaba ashobora kubona.",
+        "Ubwishuru bwandikwa ku gice cose catanzwe, bukagifunga uko igikorwa gitangwa.",
+        "Ibikorwa, ibimenyetso n'ibandiko biguma bigaragara ku mugambi mu buzima bwawo bwose, atari gusa gushika ku itariki iheruka.",
+      ],
+      outputs: [
+        "Urutonde rw'amahitamwo",
+        "Ingingo isobanutse yo kuja canke kutaja",
+        "Umugambi wuzuye",
+        "Ikibazo gikurikiranwa",
+        "Isuzuma ryahawe amanota",
+        "Icisubizo canditswe",
+        "Urugendo rwumvikanyweho",
+        "Inzira y'ubwishuru yahujwe",
+        "Ubuhamya buhoraho",
+      ],
+    },
+
+    benefits: {
+      description:
+        "Igice kinini c'ibibazo mu gusaba imfashanyo si ukwandika. Ni ukuronka itangazo, kumenya ivyo risaba, kubika ibandiko mu rutonde, no kumenya ivyabaye. Aha ni ahantu umunani urubuga rukuraho akazi.",
+      details: [
+        "Amatangazo ava ku batanga bose mu rutonde rumwe, n'ibihitamo bimwe, aho kuba amasanduku n'imbuga nyinshi.",
+        "Ibandiko bijanwa ku mugambi rimwe gusa bikagenda n'ikibazo, kugira ngo nta kintu gisubirizwe gushirwa kuri buri tangazo.",
+        "Umugambi ni inyandiko ifise intego, ibisubizo, ingengo y'imari n'aho bigeze, atari idosiye y'amafishiye yitwa ukundi.",
+        "Ibisabwa, amanota n'ingingo biraboneka, kugira ngo umusaba abone igituma ikibazo ciwe cemejwe canke kidemewe.",
+        "Imfashanyo yatanzwe, igice gikurikira n'ivyishuwe biraboneka ku mpande zose icarimwe.",
+        "Ibandiko bishizwe mu bwoko, birasuzumwa kandi bijanye n'umugambi aho kuba bikwiragiye mu butumwa.",
+        "Umukoresha akora mu kiswahili asoma urubuga rumwe n'umukoresha akora mu gifaransa, mu rurimi rwiwe.",
+        "Umufasha asobanura itangazo, atanga urutonde rw'ibandiko bikenewe kandi ahindura ibice vy'ikoranabuhanga.",
+      ],
+    },
+
+    ecosystem: {
+      description:
+        "Urubuga ni inyandiko isangiwe. Umufatanyi wese abona igice ashinzwe, kandi ukwiyamirira kwose hagati yabo ni intambwe ku mugambi umwe aho kuba ubutumwa mu nzira itandukanye.",
+      hubLabel: "Inyandiko isangiwe umufatanyi wese akorera",
+      actorDetails: [
+        "Bashira mu ngiro imigambi, bafise inyandiko z'imigambi, kandi babona ibibazo vyabo n'imfashanyo mu kibanza kimwe.",
+        "Batangaza amahirwe, bashinga ibisabwa, bagena isuzuma, batanga imfashanyo kandi bageneza ugutanga ibice.",
+        "Bahuza umugambi mu itsinda, bafise inyandiko imwe abose bayitanzeho.",
+        "Baronka itangazo, bategura umugambi ku ryo, barasaba, kandi bakurikirana ico bisubije intambwe ku ntambwe.",
+        "Basuzuma ibibazo vyatanzwe ku bisabwa vyatangajwe kandi bandika isuzuma ryahawe amanota.",
+        "Bagenzura amashirahamwe, bacunga inshingano, kandi bagenzura ibikorwa n'inyandiko z'urubuga.",
+      ],
+      flows: [
+        "Tangaza amatangazo",
+        "Tegura umugambi",
+        "Saba",
+        "Suzuma",
+        "Fata ingingo",
+        "Tanga igice",
+      ],
+    },
+
+    projects: {
+      eyebrow: "Imigambi",
+      title: "Ibitekerezo birondera imfashanyo. Imigambi iriko iragenda.",
+      description:
+        "Raba imigambi yatangajwe, ibikorwa vyafashwe biriko biragenda n'imigambi iherutse kurangira.",
+      ctaNew: "Ongeraho umugambi wiwe",
+      ctaAll: "Raba imigambi yose irondera imfashanyo",
+      errorFallback: "Ntivyashobotse kura imigambi.",
+      retry: "Ongera ugerageze kura imigambi",
+      loading: "Turiko turakura imigambi…",
+      fundedTitle: "Imigambi yafashwe",
+      groups: {
+        seeking: {
+          title: "Irondera imfashanyo",
+          body: "Imigambi ine mishasha yatangajwe idafise impfashanyo yemewe.",
+          empty: "Nta mugambi watangajwe urondera imfashanyo ubu.",
+        },
+        inProgress: {
+          title: "Iriko iragenda",
+          body: "Imigambi igera kuri ine iri kuri 90% canke munsi, itondwe kuva ku rwego rwo hejuru gushika ku rwo hasi.",
+          empty: "Nta migambi yafashwe iriko iragenda iboneka ubu.",
+        },
+        completed: {
+          title: "Iherutse kurangira",
+          body: "Imigambi ine yaherutse kurangira yafashwe.",
+          empty: "Nta migambi yafashwe yarangiye iboneka ubu.",
+        },
+      },
+      items: {
+        watershed: {
+          title: "Kugarura ahantu amazi akomoka mu komine zitatu",
+          funding: "USD 48 000 mu mezi 24",
+          objective:
+            "Kugarura imisozi yononekaye no gushimika amasoko y'amazi mu komine zitatu, biyobowe n'amakoperative y'abahingizi.",
+          results: [
+            "Hektare 120 ziriko zirarekurwa",
+            "Amakoperative 40 y'abahingizi yarafashwe",
+            "Amasoko y'amazi yarasubiwe ahantu 6",
+          ],
+          impact: ["vyagaruriwe", "amakoperative", "amasoko y'amazi"],
+        },
+        schoolClubs: {
+          title: "Amashirahamwe y'abanyeshure n'imirwi y'inyigisho mu baturage",
+          funding: "USD 31 500 mu mezi 18",
+          objective:
+            "Gushinga amashirahamwe y'abanyeshure aramba n'imirwi y'inyigisho y'abantu bakuru bikomeza gukora inyuma y'igihe c'umugambi.",
+          results: [
+            "Amashirahamwe 60 y'ishure yashinzwe kandi arakora",
+            "Imirwi 25 y'inyigisho y'abantu bakuru ihura buri ndwi",
+            "Isuzuma ry'ugusoma ku rwego rw'amatsinda ryakozwe",
+          ],
+          impact: ["abiga", "amashirahamwe", "intara"],
+        },
+        sharedConnectivity: {
+          title: "Ahantu hukorera interineti mu ntara",
+          funding: "USD 65 000 mu mezi 30",
+          objective:
+            "Gutunganyiriza ahantu h'ugukoresha interineti mu baturage ibikoresho, interineti n'amahugurwa, bicungwa n'amakoperative y'ahaho.",
+          results: [
+            "Ahantu 25 hakoresha interineti hatunganyijwe kandi harakora",
+            "Abahugura abaturage 60 bemejwe",
+            "Ikiguzi ku mukoresha kiri munsi y'urugero rw'igihugu",
+          ],
+          impact: ["ahantu", "abahuguzi", "abakoresha"],
+        },
+      },
+    },
+
+    ai: {
+      description:
+        "Baza ikibazo mu rurimi urwo ari rwo rwose mu ndimi zine z'urubuga. Umufasha akorera ku makuru y'urubuga bwite — itangazo, ibisabwa vyaryo, ibandiko vyaryo — aho kuba ku kiyago gitagira aho gishingiye.",
+      capabilityDetails: [
+        "Kuvuga mu ncamake ivyo itangazo rigamije, abo rifunguriwe n'ivyo rizofasha.",
+        "Guhindura igice kigoye c'ukwemerwa urutonde rw'ibibazo ushobora gusubiza.",
+        "Gutanga urutonde rw'ibandiko itangazo risaba no kwerekana ibitakiri mu mugambi wawe.",
+        "Kugabanya inyandiko ndende y'itangazo gushika ku bice bikora ku shirahamwe ryawe.",
+        "Gutanga ibisobanuro mu rurimi umusomyi ari gukorera.",
+        "Gutambutsa intambwe ikurikira y'ikibazo, mu buryo, nta kintu catawe.",
+      ],
+      script: {
+        assistant: [
+          "Noshobora kugufasha gusuzuma ibisabwa vyemewe. Ku mfashanyo y'abaturage, ibintu bibiri akenshi bigena ukwemerwa ni iyandikwa ryemewe n'umwaka umwe w'ibikorwa vyanditswe.",
+          "Amatangazo menshi asaba bitatu: icemezo c'iyandikwa, integuro y'akazi yashizweko umukono n'ingengo y'imari. Fungura itangazo, hanyuma urupapuro rw'ibandiko rwerekana ivyo ufise n'ibitakiriho.",
+        ],
+      },
+    },
+
+    languages: {
+      description:
+        "Urubuga ruraboneka mu congereza, igifaransa, ikirundi n'ikiswahili. Umusomyi ashobora gushakisha, guhitamwo, kubika no gutanga atava mu rurimi yatanguye, kandi umuyobozi ashobora kongeramo ururimi rwa gatanu atakoze ku gice na kimwe c'urubuga.",
+      note: "Imikurikiranyo n'ibisobanuro vy'urupapuro bihinduwe mu ndimi zine zose. Izina ry'itangazo bwite riguma mu rurimi ryanditswe; imikurikiranyo izikikije ikurikira umusomyi.",
+    },
+
+    testimonials: {
+      quotes: [
+        "Narakoresha urutonde rw'amatangazo mu rupapuro rw'ibara ryahise rishaje. Ubu itariki iheruka, ibandiko n'aho ikibazo canje kigereye biri ku rupapuro rumwe, kandi nareka gukorera ku kwibuka.",
+        "Dutangaza itangazo rimwe hanyuma tubona buri kibazo ku bisabwa bimwe. Abagenzuzi ntibongera kuduha amanota mu butumwa, kandi dushobora gusubiza ikibazo c'umusaba ata kurondera urudodo.",
+        "Nahawe ibibazo vyihariye, ntibansabwa kubironka. Amanota yanje ari ku bisabwa vyatangajwe, kugira ngo ingingo ntanga ishobore gusobanurwa ku woyibaza wese.",
+      ],
+    },
+
+    impact: {
+      description:
+        "Impinduka zitanu, mu rutonde zibaho. Buri imwe ni ikivugwa ku kuntu urubuga rukora, atari ikipimo c'ukuntu rukora neza, kandi ni ubwoko bw'ivugwa bushoboka gusa imbere y'ugutangura.",
+      details: [
+        "Itangazo ryari kwibagirwa mu masanduku yuzuye ubu rironka ukoresheje igihitamo n'ikimenyetso c'itariki iheruka.",
+        "Umugambi wateguwe ku bisabwa nyakuri imbere y'itariki iheruka, aho kuwandika ku masaha 23 ijoro ribanza.",
+        "Ingingo z'imfashanyo n'ugutanga ibice vyanditswe ahantu impande zose zishobora gusoma, aho kuhuza mu butumwa.",
+        "Ibikorwa n'ibimenyetso bisuzumwa ku gihe, igihe umugambi ukiri gukora kandi ushobora kugororwa.",
+        "Abafise imigambi n'amashirahamwe atanga imfashanyo bakorera ku nyandiko imwe aho guhana verisiyo.",
+      ],
+    },
+
+    pricing: {
+      roleDetails: [
+        "Iyandikishe ishirahamwe ryawe, tangaza amatangazo, kandi ucunge ibibazo ubona.",
+        "Bihabwa n'uwutanga imfashanyo canke umuyobozi. Suzuma ibibazo vyahawe ku bisabwa vyatangajwe.",
+        "Ubuyobozi bw'urubuga: ukugenzura, ukugena inshingano no kugenzura ibikorwa.",
+      ],
+    },
+
+    faq: {
+      description:
+        "Ibibazo cumi na bibiri bigena ko urubuga rukoreshwa, bisubijwe ata rurimi rw'ubucuruzi. Aho inyishu y'ukuri ari yuko ikintu kitubatswe, ni co bivuga.",
+      a: {
+        q1: "Ubwoko bubiri bw'amatangazo: amahirwe y'imfashanyo, atanga amafaranga ku mugambi, n'amatangazo y'imigambi, atumira icifuzo. Buri tangazo rifise ishami, aho riri, incamake y'ukwemerwa, ibandiko risaba n'itariki yo gufunga. Igice c'ugushakisha kihitamwo ubwoko bwose uko ari bubiri kugira ngo ugabanye urutonde imbere yo gutangura gusoma.",
+        q2: "Buri tangazo ryerekana ikigero, kandi igihitamo kikwemerera kugabanya urutonde ku matangazo afunguye gusa. Itariki iheruka iri ku karita no mu bisobanuro vy'itangazo, kandi imenyesha ishobora kugenerwa kuri buri mukoresha kugira ngo itariki yo gufunga itabe ikintu ugomba kwibuka.",
+        q3: "Inyandiko y'umugambi ifise intego zawo, ingengo y'imari n'ibandiko, hamwe n'ivyo itangazo ryihariye risaba. Kubera ko ibandiko bijanwa ku mugambi aho kuba ku kibazo, umugambi wateguwe rimwe ushobora gutangwa ku matangazo menshi nta gushira ikintu ukundi. Umufasha wa AI atanga urutonde rw'ibandiko itangazo risaba.",
+        q4: "Ikibazo gifise ikigero n'amateka aho kuba ikimenyetso kimwe c'uko catanzwe canke kitatanzwe, kugira ngo ubone intambwe kigereye. Ko ikibazo catanzwe gishobora guhindurwa canke kitashobora bivana n'amategeko y'itangazo bwite, avugwa mu bisobanuro vyaryo; urubuga rwerekana intambwe, ntirutsinda amategeko y'uwutanga imfashanyo.",
+        q5: "Bihagije kugira ngo bisuzumwe: ivyo umugambi uzokora, ku bandu ki, mu gihe kingana iki, ku kiguzi kingana iki, n'ukuntu uzomenya ko vyakunze. Umugambi uremwa imbere y'uko usaba itangazo, bisobanura ko ushobora gutegura ku bisabwa nyakuri aho kuwandika ku itariki iheruka.",
+        q6: "Imfashanyo yatanzwe ijangwa ku mugambi hamwe n'urugendo rw'ugutanga ibice. Buri gice candikwa uko gitangwa, kugira ngo umusaba abone ivyemejwe, ivyashitse n'igikurikira. Urubuga rwandika urugendo n'aho rugereye; ntiruba ikigo c'imari ubwaco.",
+        q7: "Ibandiko umugambi canke itangazo risaba — ivyemezo vy'iyandikwa, integuro z'akazi, ingengo y'imari, inyandiko z'igitekerezo, politiki. Buri dosiye ishirwa mu bwoko kandi ifise ikigero c'isuzuma, kandi iboneka ku mpande zijanye n'uwo mugambi aho gutangazwa. Ibandiko bibikwa ku nyandiko y'umugambi kugira ngo bigume kumwe mu buzima bwose bw'umugambi.",
+        q8: "Ku bisabwa biteguye, buri mugenzuzi ahabwa ibibazo vyihariye na buri nota yandikwa ku nshingano yayo. Ingingo y'uguhitamo ibikwa ku kibazo, ni co gituma ico cisubizo gisobanurwa ku musaba akibaza. Urubuga ntifata ingingo na imwe ubwaco; rwandika ibisabwa, amanota n'ingingo.",
+        q9: "Ubwishuru bwandikwa ku gice catanzwe, kugira ngo igice gishobore guhuzwa uko igikorwa gitangwa aho kuba rimwe ku mpera. Uwutanga imfashanyo n'uwufise umugambi babona inyandiko imwe, ivyo bikuraho uguhuza gukora mu butumwa ku mpera y'igihe c'ivyerekanwa.",
+        q10: "Isigura itangazo, ihindura ibisabwa vy'ukwemerwa urutonde, itanga urutonde rw'ibandiko bikenewe, yoroshya inyandiko igoye, ihindura ibisobanuro mu ndimi kandi ikurongoza ku ntambwe ikurikira y'ikibazo. Ntifata ingingo y'imfashanyo, ntiyitamwo abasaba, kandi ntitanga ingingo ya nyuma y'ukwemerwa. Izo ngingo ni iz'abayobora itangazo.",
+        q11: "Icongereza, igifaransa, ikirundi n'ikiswahili. Igihitamo kiri mu ruranda rw'ibanze kandi ihitamwo ribikwa kuri iki gikoresho, kandi rigena n'ururimi rw'urupapuro kugira ngo ibisoma rupapuro n'ubuhinduzi bw'umushashari bikore neza. Imikurikiranyo n'ibisobanuro vy'urupapuro bihinduwe mu ndimi zine zose; inyandiko bwite y'itangazo iguma mu rurimi ryanditswe.",
+        q12: "Kwinjira guhindura ibimenyetso vyawe mu tweme two gukoresha igihe gito aho kuba ikiringo kibikwe, kandi urubuga rwubatswe n'inshingano z'ishirahamwe, z'umugenzuzi n'iz'umuyobozi. Ibandiko bijanye n'umugambi aho kuba ku mugaragaro. Hari ibintu bibiri vy'ukuri: ugushira mu ngiro inshingano biracari gukorwa mu bisabwa vy'uburenganzira vy'API, kandi gusohoka ubu bisiba utweme kuri iki gikoresho gusa, kuko API itarafise aho yo gusubiza.",
+      },
+    },
+
+    finalCta: {
+      details: [
+        "Raba urutonde rw'amatangazo afunguye, uhitamwo ku ishami, aho biri n'itariki iheruka.",
+        "Fungura konti kugira utegure umugambi kandi ubike ibandiko vyawo ahantu hamwe.",
+        "Iyandikishe ishirahamwe kugira utangaze amatangazo kandi ucunge ibibazo ubona.",
+      ],
+      note: "Amatangazo, imigambi n'ibibazo bigaragara kuri uru rupapuro ni inyandiko z'ingero. Indimi zine z'urubuga zirakora, kandi ibisobanuro vy'urupapuro bihinduwe hamwe na zo.",
+    },
+
+    opps: {
+      sectors: {
+        climate: "Ikirere n'ibidukikije",
+        education: "Inyigisho",
+        entrepreneurship: "Ukwihingurira ibikorwa",
+        health: "Ubuzima",
+        digital: "Ukwakira abose mu koranabuhanga",
+        governance: "Ubuyobozi",
+      },
+      locations: {
+        burundiRegional: "Burundi, mu ntara",
+        eastAfrica: "Afrika y'Uburasirazuba",
+        regional: "Mu ntara",
+        burundiNational: "Burundi, igihugu cose",
+        subSaharanAfrica: "Afrika y'epfo y'ibara ry'umusaraba",
+        centralAfrica: "Afrika yo hagati",
+      },
+      places: {
+        burundi: "Burundi",
+      },
+      items: {
+        resilienceGrants: {
+          title: "Imfashanyo z'ukwihangana kw'abaturage",
+          provider: "Uwutanga imfashanyo w'ingero",
+          amount: "USD 12 000 - 60 000",
+          summary:
+            "Ifasha ibikorwa vy'ukwihindurira uko ari mu karere — amazi, ubutaka, imenyesha ry'akaga n'ukwihangana kw'ingo — bikorwa n'amashirahamwe ari mu karere kagenderwaho.",
+          eligibility: [
+            "Ishirahamwe ryanditswe canke itsinda ryanditswe",
+            "Nibura umwaka umwe w'ibikorwa",
+            "Ibikorwa bikorwa mu karere kagenderwaho",
+          ],
+          documents: ["Icemezo c'iyandikwa", "Integuro y'akazi yashizweko umukono", "Ingengo y'imari"],
+        },
+        learningCommunities: {
+          title: "Itangazo ry'imirwi y'inyigisho",
+          provider: "Sekiretariya y'umugambi w'ingero",
+          amount: "Ingengo y'imari y'umugambi gushika kuri USD 40 000",
+          summary:
+            "Itangazo ry'icifuzo ryubaka imirwi y'inyigisho iramba mu baturage: amashirahamwe y'ishure, imirwi y'inyigisho mu baturage n'imirongo y'inyigisho y'abantu bakuru.",
+          eligibility: [
+            "Ishirahamwe ry'inyigisho canke ry'urwaruka",
+            "Ubuhamya bw'ibikorwa ku rwego rw'abaturage",
+            "Integuro igera ku mezi 12 nibura",
+          ],
+          documents: ["Inyandiko y'igitekerezo", "Urupapuro rw'ishirahamwe", "Politiki yo kurengera"],
+        },
+        youthEnterprise: {
+          title: "Imfashanyo y'ibikorwa vy'urwaruka",
+          provider: "Umufatanyabikorwa w'imfashanyo w'ingero",
+          amount: "USD 5 000 - 25 000",
+          summary:
+            "Amafaranga yo gukoresha n'ubujyanama ku bashinga b'urwaruka, hakundwa ibikorwa birema akazi mu karere.",
+          eligibility: [
+            "Uwushingiye afise imyaka 18-35",
+            "Ubucuruzi bwanditswe",
+            "Ubucuruzi bukora munsi y'amezi 24",
+          ],
+          documents: ["Iyandikwa ry'ubucuruzi", "Igereranyo ry'ugutembera kw'amafaranga", "CV y'uwushingiye"],
+        },
+        maternalHealth: {
+          title: "Umugambi w'ubuzima bw'abavyeyi mu baturage",
+          provider: "Ubufatanye bw'ubuzima bw'ingero",
+          amount: "Ingengo y'imari y'umugambi, imyaka myinshi",
+          summary:
+            "Harondera abafatanyabikorwa bo gushira mu ngiro ubuzima bw'abavyeyi mu baturage, harimwo inzira zo kuhereza abarwayi n'amahugurwa y'abafasha b'abavyeyi.",
+          eligibility: [
+            "Ishirahamwe ry'ubuzima ridaharanira inyungu canke ivuriro ryemewe",
+            "Ubuyobozi bw'ivuriro buriho",
+            "Uburambe mu ntara igenderwaho",
+          ],
+          documents: ["Icemezo c'ukwemerwa", "Inyandiko y'ivuriro", "Urugero rw'ukurikirana"],
+        },
+        digitalAccess: {
+          title: "Imfashanyo z'ugushika ku koranabuhanga mu ntara",
+          provider: "Ikigega c'ikoranabuhanga c'ingero",
+          amount: "USD 20 000 - 90 000",
+          summary:
+            "Ibikoresho, interineti n'amahugurwa ku baturage bo mu ntara, hashimikwa uburyo bwo gukoresha hamwe aho kugabura ibikoresho ku muntu ku wundi.",
+          eligibility: [
+            "Ikigo kitaharanira inyungu canke c'ubutegetsi",
+            "Ubufatanye n'ishirahamwe ry'abaturage ry'ahaho",
+            "Integuro y'ukwihangana mu myaka itatu",
+          ],
+          documents: ["Inyandiko y'igitekerezo", "Amabaruwa y'ubufatanye", "Integuro y'ukwihangana"],
+        },
+        governanceCivics: {
+          title: "Inyigisho z'ubwenegihugu n'ubuyobozi bw'ahaho",
+          provider: "Fondasiyo y'ubwenegihugu y'ingero",
+          amount: "Imfashanyo gushika kuri USD 30 000",
+          summary:
+            "Imigambi y'inyigisho z'ubwenegihugu yubaka ugutahura kw'abaturage ku buyobozi bw'ahaho, ingengo y'imari ya Leta n'uburenganzira bw'abenegihugu.",
+          eligibility: [
+            "Ishirahamwe ry'abaturage",
+            "Ubuhamya bw'ugufasha abaturage",
+            "Umugambi utagira uruhande rwa politiki",
+          ],
+          documents: ["Inyandiko y'igitekerezo", "Integuro y'ibikorwa", "Umwirondoro w'abafasha"],
+        },
+      },
+    },
+
+    api: {
+      unreachable:
+        "Ntivyashobotse kugera kuri API. Genzura umurongo wawe kandi wemeze ko server ya frontend na Django zirakora.",
+      unreachableShort:
+        "Ntivyashobotse kugera kuri API. Wemeze ko server ya frontend na Django zirakora.",
+      requestFailed: "Server ntivyashobotse kurangiza ico usavye. Ongera ugerageze.",
+      accountLoadFailed: "Amakuru y'ikonti yiwe ntayashoboye kurazwa.",
+    },
+
+    session: {
+      browserOnly: "Ikiringo c'ukwinjira gishobora kubikwa mu mushashari gusa.",
+      tokensMissing: "Inyishu y'ukwinjira ntiyarimwo utweme twose uko ari tubiri.",
+      saveFailed:
+        "Umushashari wawe ntivyashobotse kubika ikiringo c'ukwinjira. Emeza ububiko bw'urubuga hanyuma ugerageze ukundi.",
+      loginRequired: "Ndagusavye injira kugira ukomeze.",
+      expiredInactive:
+        "Ikiringo cawe carangiye inyuma y'amasaha 60 ata gikorwa. Ndagusavye ongera winjire.",
+      renewUnreachable:
+        "Ntivyashobotse kuvugurura ikiringo kuko API idashikika. Ndagusavye gerageza ukundi.",
+      changed: "Ikiringo c'ukwinjira carahindutse. Ndagusavye gerageza ukundi.",
+      expired: "Ikiringo cawe c'ukwinjira carangiye. Ndagusavye ongera winjire.",
+      renewFailed: "Server ntivyashobotse kuvugurura ikiringo cawe. Ndagusavye gerageza ukundi.",
+      invalidRenewal: "Server yasubije inyishu itari yo yo kuvugurura ikiringo.",
+      saveRenewedFailed: "Umushashari wawe ntivyashobotse kubika ikiringo cavuguruwe.",
+      noRefreshToken: "Nta tweme two kuvugurura turahari. Ushobora gusiba ikiringo c'iyi mushashari aho.",
+      logoutFailed:
+        "Gusohoka kuri server ntivyashobotse kurangira. Ongera ugerageze canke usibe ikiringo c'iyi mushashari.",
+      logoutFailedBare: "Gusohoka kuri server ntivyashobotse kurangira.",
+    },
+  },
+};

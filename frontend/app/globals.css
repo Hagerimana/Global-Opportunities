@@ -1,0 +1,765 @@
+/*
+ * Global stylesheet -- the design system for the whole application.
+ *
+ * Loaded once from `app/layout.tsx`. Four layers live here:
+ *
+ *   1. the Tailwind directives
+ *   2. element-level foundations (reset, typography defaults, easings as vars)
+ *   3. `components/` -- reusable surface and control classes
+ *   4. `utilities/` -- animation triggers and decorative helpers
+ *
+ * The rule of thumb for this file: if a value appears in more than one
+ * component, it belongs here; if it appears once, it belongs in the component
+ * as a Tailwind utility. Colours, easings, shadows and keyframes live in
+ * `tailwind.config.ts` -- this file only adds the things Tailwind's layer system
+ * cannot express (a keyframe-driven transition, a backdrop-filter stack, a
+ * scroll-reveal contract).
+ */
+
+/* Tailwind's three layers. Order matters: it must follow the pipeline. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------------- */
+/* 1. Foundations                                                            */
+/* ------------------------------------------------------------------------- */
+
+/* Tells the browser only a light theme is intended, so form controls and
+   scrollbars render light without a dark-mode variant everywhere. */
+:root {
+  color-scheme: light;
+
+  /* The two easings from `tailwind.config.ts`, mirrored as plain custom
+     properties. A stylesheet-declared transition (`.reveal` below) cannot call
+     a Tailwind utility function, and redefining the cubic-bezier here keeps one
+     source of truth for the shape of the motion. */
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /*
+   * The fluid type scale.
+   *
+   * Each step is `clamp(min, preferred, max)`, which is the whole responsive
+   * typography mechanism: the middle term is a `vw` calculation, so the size
+   * scales continuously with the viewport instead of jumping at breakpoints.
+   *
+   * The two ends are both load-bearing. The minimum is what a 320px phone gets,
+   * and it is deliberately *smaller* than the Tailwind class it replaces -- a
+   * 3xl heading on a 320px screen wraps to four lines and pushes everything
+   * below it off the fold. The maximum is the desktop size, reached at roughly
+   * 1280px, so a wide monitor does not keep growing the type.
+   *
+   * The `--step-*` values are consumed by the `.text-step-*` utilities below and
+   * by `check-responsive.cjs`, which asserts that every clamp resolves to a
+   * sensible range. Declaring them here rather than inline in each utility is
+   * what makes that check possible.
+   */
+  --step-eyebrow: clamp(0.66rem, 0.62rem + 0.2vw, 0.72rem);
+  --step-body: clamp(0.95rem, 0.9rem + 0.22vw, 1.06rem);
+  --step-body-lg: clamp(1rem, 0.95rem + 0.3vw, 1.19rem);
+  --step-h4: clamp(1.05rem, 0.98rem + 0.4vw, 1.31rem);
+  --step-h3: clamp(1.19rem, 1.06rem + 0.72vw, 1.6rem);
+  --step-h2: clamp(1.6rem, 1.24rem + 2vw, 2.75rem);
+  --step-h1: clamp(2.1rem, 1.5rem + 3.4vw, 4.25rem);
+
+  /*
+   * Horizontal gutters, as a clamp for the same reason.
+   *
+   * A fixed `px-5` is too little on a 390px phone and wasteful on a 1440px
+   * desktop; a percentage is the reverse. The minimum is a 20px gutter, which
+   * still leaves a 350px content column on the narrowest phone in common use,
+   * and the maximum is 40px, where the line length stops improving.
+   */
+  --gutter: clamp(1.25rem, 0.55rem + 3.1vw, 2.5rem);
+
+  /*
+   * Minimum tap target.
+   *
+   * WCAG 2.2 SC 2.5.8 asks for 24x24 CSS pixels, and 44x44 is the figure that
+   * comes from the platform guidance (iOS HIG, Material). The gap matters on
+   * this page specifically: the navbar links, the FAQ triggers and the filter
+   * chips are all small, densely repeated controls, which is exactly the case
+   * where undersized targets are hardest to hit. 44px is applied via
+   * `.tap` rather than to every button, because a 44px minimum on a desktop
+   * would visibly bloat the navbar.
+   */
+  --tap: 2.75rem;
+
+  /*
+   * Height of the sticky navbar. Anchor targets need this much clearance so a
+   * section heading is never hidden underneath the bar.
+   *
+   * The bar is fluid for the same reason as the gutters: a taller bar on a
+   * phone costs vertical space that a landing page cannot spare, and the
+   * 4.5rem desktop value is more than a 390px screen needs.
+   *
+   * `env(safe-area-inset-top)` is *added* to the height rather than being
+   * handled by a separate padding rule. That matters because `--nav-h` is read
+   * in three other places -- `scroll-padding-top` for anchor targets, and the
+   * mobile menu's `max-height` -- and if the notch clearance lived in a padding
+   * rule instead, all three would size themselves to a bar that is actually
+   * taller than they think, and anchor targets would land under the notch.
+   *
+   * The fallback matters for correctness, not just syntax: `env()` is
+   * unsupported on some older engines and resolves to a *declaration* being
+   * dropped, so without the fallback the whole `calc()` is invalid and
+   * `--nav-h` would be undefined -- taking the anchor offsets with it.
+   */
+  --nav-h: calc(3.75rem + env(safe-area-inset-top, 0px));
+}
+
+@media (min-width: 640px) {
+  :root {
+    --nav-h: calc(4.25rem + env(safe-area-inset-top, 0px));
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --nav-h: calc(4.5rem + env(safe-area-inset-top, 0px));
+  }
+}
+
+/* border-box makes declared widths include padding and border, which is what
+   every component in the app assumes. Tailwind's preflight also sets this; it
+   is repeated here so the rule survives if preflight is ever trimmed. */
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth in-page scrolling, so the navbar's anchor links glide to each section
+   instead of jumping. `--nav-h` keeps the target clear of the sticky bar.
+   Scoped to the root element so it does not inherit into iframes. */
+html {
+  scroll-behavior: smooth;
+  /*
+   * The extra clearance above `--nav-h` is a fluid gap, so a phone -- where the
+   * bar is shorter but the target still needs to clear it -- and a desktop do not
+   * both get the same 1.5rem of dead space.
+   */
+  scroll-padding-top: calc(var(--nav-h) + clamp(0.75rem, 2vw, 1.5rem));
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Page-level defaults: the off-white canvas, the near-black green text, and the
+   sans stack. `font-feature-settings` enables the tabular figures and
+   discretionary ligatures that make numbers and headings look set rather than
+   merely rendered. */
+body {
+  margin: 0;
+  background: #f6faf8;
+  color: #0c1f1a;
+  font-family:
+    var(--font-sans), ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "ss01";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Long opportunity titles and organisation names must wrap, not overflow. */
+  overflow-wrap: break-word;
+}
+
+/* The editorial serif for headlines, paired against the sans body to build the
+   tone. Driven by `--font-display`, which `next/font` injects in the layout;
+   the Georgia fallback keeps the page legible if the webfont is unavailable. */
+.display {
+  font-family: var(--font-display), ui-serif, Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  /* Display faces need tighter tracking at large sizes to avoid looking loose
+     next to the sans body copy. */
+  letter-spacing: -0.02em;
+}
+
+/* Highlight colour for text the user selects. */
+::selection {
+  background: #bfe1ce;
+  color: #0b241c;
+}
+
+/*
+ * A visible, consistent focus ring for keyboard users only.
+ *
+ * `:focus-visible` (not `:focus`) means a mouse click does not leave a ring
+ * behind, while Tab always does. `outline-offset` keeps the ring off the
+ * element's own border so it stays legible on both light and dark surfaces.
+ */
+:focus-visible {
+  outline: 2px solid #267554;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* On dark panels the default green ring disappears, so invert it. */
+.on-dark :focus-visible {
+  outline-color: #bfe1ce;
+}
+
+/* A slim, brand-tinted scrollbar. `scrollbar-width`/`scrollbar-color` are the
+   standards-based properties; the `::-webkit-scrollbar` block is the
+   Chromium/Safari fallback. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #bfe1ce transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bfe1ce;
+  border-radius: 9999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #93cbae;
+}
+
+/* ------------------------------------------------------------------------- */
+/* 2. Components: surfaces and controls                                      */
+/* ------------------------------------------------------------------------- */
+
+@layer components {
+  /*
+   * The page's horizontal rhythm. One class so every section lines up with
+   * every other section, including the navbar and footer.
+   */
+  .container-x {
+    @apply mx-auto w-full max-w-8xl;
+    /*
+     * The gutter is one fluid clamp, applied here as a plain declaration rather
+     * than as `px-5 sm:px-6 lg:px-10`. Three fixed steps would put a visible
+     * jump in the content edge at 640px and 1024px, and every new section would
+     * have to remember to repeat the ramp.
+     *
+     * `padding-inline` rather than Tailwind's `px-*` because the value is a
+     * `var()`, and a logical property is what actually matches the intent on a
+     * page that is nominally LTR but must not assume it.
+     */
+    padding-inline: var(--gutter);
+  }
+
+  /*
+   * The fluid type steps, mirroring `--step-*` from `:root`.
+   *
+   * These exist so the scale is defined once. A section that needs a heading
+   * writes `.text-step-h2`, and `check-responsive.cjs` can then assert that
+   * every step in use is ordered and bounded -- which it could not do if each
+   * component carried its own `text-3xl sm:text-4xl lg:text-[2.75rem]`.
+   */
+  .text-step-eyebrow {
+    font-size: var(--step-eyebrow);
+  }
+
+  .text-step-body {
+    font-size: var(--step-body);
+  }
+
+  .text-step-body-lg {
+    font-size: var(--step-body-lg);
+  }
+
+  .text-step-h4 {
+    font-size: var(--step-h4);
+  }
+
+  .text-step-h3 {
+    font-size: var(--step-h3);
+  }
+
+  .text-step-h2 {
+    font-size: var(--step-h2);
+  }
+
+  .text-step-h1 {
+    font-size: var(--step-h1);
+  }
+
+  /*
+   * The minimum tap target.
+   *
+   * `min-h`/`min-w` rather than fixed `h`/`w`, so an element with a long
+   * translated label still grows -- a fixed 44px would clip it. `inline-flex`
+   * centres the content in that box.
+   *
+   * `touch-action: manipulation` on the target itself rather than on `body`,
+   * because the browser consults it where the gesture starts; a value on an
+   * ancestor the finger has already reached does not reliably suppress the
+   * double-tap delay.
+   */
+  .tap {
+    @apply inline-flex min-h-[var(--tap)] min-w-[var(--tap)] items-center justify-center;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgb(38 117 84 / 0.12);
+  }
+
+  /*
+   * The eyebrow label above every section heading: a short uppercase string in
+   * the brand green with wide tracking.
+   */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-pine-600;
+  }
+
+  /* On dark sections the eyebrow needs the light ramp instead. */
+  .eyebrow-light {
+    @apply text-pine-200;
+  }
+
+  /*
+   * Frosted surface. Three stacked translucent whites plus a backdrop blur:
+   * a blur (what you see through), a saturate boost (so the colours behind do
+   * not go grey), and a semi-opaque tint (so text contrast survives whatever
+   * scrolls past). The inset top highlight in `shadow-glass` is what makes the
+   * edge read as a lit bevel rather than a border.
+   */
+  .glass {
+    background: rgba(255, 255, 255, 0.72);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    backdrop-filter: blur(18px) saturate(180%);
+    @apply shadow-glass;
+  }
+
+  /* A heavier variant for panels that sit on top of a busy background, such as
+     the hero visual or a floating card. */
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.86);
+    -webkit-backdrop-filter: blur(26px) saturate(190%);
+    backdrop-filter: blur(26px) saturate(190%);
+    @apply shadow-card;
+  }
+
+  /* The inverse: frosted dark glass for panels on a `bg-pine-sheen` section. */
+  .glass-dark {
+    background: rgba(255, 255, 255, 0.07);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    backdrop-filter: blur(20px) saturate(160%);
+    @apply border border-white/10;
+  }
+
+  /*
+   * Hairline border for frosted panels. A flat `border-white/70` disappears
+   * against a white card; this gradient keeps the top edge bright and lets the
+   * bottom edge fade into the surface.
+   */
+  .hairline {
+    @apply border border-white/70;
+  }
+
+  /*
+   * Primary button. The `::after` sheen sweeps once on hover -- a 2.6s infinite
+   * animation would be distracting on a control the user clicks deliberately,
+   * so the sweep is transition-driven instead of always-on.
+   */
+  .btn {
+    @apply inline-flex select-none items-center justify-center gap-2 rounded-full text-sm font-semibold;
+    @apply transition-all duration-300 ease-premium;
+  }
+
+  .btn-primary {
+    @apply btn bg-pine-800 px-6 py-3.5 text-white shadow-glow;
+  }
+
+  .btn-primary:hover {
+    @apply -translate-y-0.5 bg-pine-700 shadow-lift;
+  }
+
+  .btn-primary:active {
+    @apply translate-y-0;
+  }
+
+  /* Light button for use on dark panels. */
+  .btn-light {
+    @apply btn bg-white px-6 py-3.5 text-pine-900 shadow-card;
+  }
+
+  .btn-light:hover {
+    @apply -translate-y-0.5 bg-pine-50 shadow-lift;
+  }
+
+  /* Outlined button: the secondary action, and the mobile-menu equivalent of a
+     primary button once the layout stacks. */
+  .btn-outline {
+    @apply btn border border-pine-900/15 bg-white/70 px-6 py-3.5 text-pine-900 backdrop-blur;
+  }
+
+  .btn-outline:hover {
+    @apply -translate-y-0.5 border-pine-700/30 bg-white;
+  }
+
+  /* Outlined button on a dark panel, where a white border is the only outline
+     that reads. */
+  .btn-ghost-light {
+    @apply btn border border-white/25 px-6 py-3.5 text-white;
+  }
+
+  .btn-ghost-light:hover {
+    @apply -translate-y-0.5 border-white/50 bg-white/10;
+  }
+
+  /*
+   * Gold button. The one warm control on the page, reserved for the primary
+   * action inside a dark panel -- the access plan and the closing call to
+   * action. Gold on pine is the highest-contrast pairing the palette allows,
+   * and using it sparingly is what keeps it reading as emphasis rather than as
+   * decoration.
+   *
+   * The text is pine-950 on gold-400 rather than white: at this lightness a
+   * white label drops below the 4.5:1 contrast threshold, and a primary button
+   * is the worst place to fail that.
+   */
+  .btn-gold {
+    @apply btn bg-gold-400 px-6 py-3.5 text-pine-950 shadow-glow;
+  }
+
+  .btn-gold:hover {
+    @apply -translate-y-0.5 bg-gold-300 shadow-lift;
+  }
+
+  .btn-gold:active {
+    @apply translate-y-0;
+  }
+
+  /*
+   * The keyboard skip link.
+   *
+   * Off-screen until focused, then pinned to the top-left above everything --
+   * including the fixed navbar, which is why the offset is larger than the
+   * navbar height rather than equal to it. `sr-only` alone would not work here:
+   * it clips the element to 1px, so the focused link would be invisible.
+   */
+  .skip-link {
+    @apply sr-only;
+  }
+
+  .skip-link:focus-visible {
+    @apply not-sr-only fixed left-4 top-4 z-[100] rounded-full bg-pine-900 px-5 py-3;
+    @apply text-sm font-semibold text-white shadow-lift;
+  }
+
+  /* Small pill used for sectors, locations, eligibility criteria and tags. */
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-pine-900/10 bg-white/80 px-3 py-1 text-xs font-medium text-ink-muted;
+  }
+
+  /* The same pill in its low-emphasis state, for secondary metadata. */
+  .chip-muted {
+    @apply chip border-transparent bg-pine-50 text-pine-700;
+  }
+
+  /*
+   * The pointer-following highlight on interactive cards. `--mx`/`--my` are
+   * written by the `SpotlightCard` component on pointer move; the gradient is
+   * painted from that point. It is `pointer-events-none` so it can never
+   * intercept a click, and it is transparent by default so a card that has not
+   * been hovered shows nothing at all.
+   */
+  .spotlight::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 500ms var(--ease-premium);
+    background: radial-gradient(
+      340px circle at var(--mx, 50%) var(--my, 50%),
+      rgba(56, 146, 108, 0.13),
+      transparent 62%
+    );
+    pointer-events: none;
+  }
+
+  .spotlight:hover::before,
+  .spotlight:focus-within::before {
+    opacity: 1;
+  }
+
+  /*
+   * A conic gradient border that rotates on hover. Implemented as a mask so the
+   * effect is a 1px ring rather than a filled panel -- the ring is what makes
+   * the primary opportunity card feel interactive.
+   */
+  .ring-conic {
+    position: relative;
+  }
+
+  .ring-conic::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(
+      from var(--angle, 0deg),
+      transparent 0deg,
+      rgba(229, 186, 90, 0.9) 70deg,
+      rgba(56, 146, 108, 0.9) 160deg,
+      transparent 260deg
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 400ms var(--ease-premium);
+    pointer-events: none;
+  }
+
+  .ring-conic:hover::after,
+  .ring-conic:focus-within::after {
+    opacity: 1;
+  }
+}
+
+/*
+ * Registers the custom property the conic ring above reads, which is what makes
+ * its angle animatable. Declared at the top level rather than inside
+ * `@layer components` because it is a registration, not a rule.
+ *
+ * Browsers without `@property` support ignore the block and the ring simply
+ * renders at its resting angle -- the intended fallback, not a broken state.
+ */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* ------------------------------------------------------------------------- */
+/* 3. Utilities: animation triggers and decoration                            */
+/* ------------------------------------------------------------------------- */
+
+@layer utilities {
+  /*
+   * The scroll-reveal contract.
+   *
+   * `components/ui/reveal.tsx` renders an element with `data-reveal="up"`
+   * (or `"left"` / `"right"` / `"scale"` / `"none"`) and flips
+   * `data-revealed="true"` from an IntersectionObserver. The pre-reveal state
+   * lives here, entirely in CSS, so nothing animates on the server and there is
+   * no flash of already-visible content.
+   *
+   * The resting state is the *revealed* state, not the hidden one. That matters:
+   * if JavaScript never runs -- no observer support, an error during hydration,
+   * a prerendered page -- the content is simply visible. A design that inverted
+   * this would ship an invisible landing page in exactly those cases.
+   */
+  [data-reveal] {
+    opacity: 0;
+    transform: translate3d(0, var(--reveal-y, 26px), 0);
+    transition:
+      opacity 800ms var(--ease-premium),
+      transform 1000ms var(--ease-premium);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+
+  [data-reveal="left"] {
+    transform: translate3d(-32px, 0, 0);
+  }
+
+  [data-reveal="right"] {
+    transform: translate3d(32px, 0, 0);
+  }
+
+  /*
+   * Below `lg`, horizontal entrance offsets become vertical ones.
+   *
+   * A 32px sideways offset is only free when there is 32px of slack beside the
+   * element. On a phone there is not: the AI assistant's two-column grid keeps
+   * one column at full width, so the shifted box hung 32px past its own grid and
+   * made the document wider than the screen on every width under 768px. That is
+   * the whole complaint -- content off the right edge, reachable only by
+   * dragging the page sideways.
+   *
+   * Swapping the axis keeps the motion and removes the overflow, rather than
+   * clipping the overflow away and hiding whatever else lands out there.
+   */
+  @media (max-width: 1023px) {
+    [data-reveal="left"],
+    [data-reveal="right"] {
+      transform: translate3d(0, var(--reveal-y, 26px), 0);
+    }
+  }
+
+  [data-reveal="scale"] {
+    transform: scale(0.955);
+  }
+
+  [data-reveal="none"] {
+    transform: none;
+  }
+
+  [data-reveal][data-revealed="true"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  /*
+   * The faint square grid laid over the hero and the dark sections, fading out
+   * towards the edges via a radial mask. `background-size` sets the cell pitch.
+   */
+  .grid-fade {
+    background-image:
+      linear-gradient(rgba(23, 62, 48, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(23, 62, 48, 0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(
+      ellipse 80% 60% at 50% 40%,
+      #000 40%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 80% 60% at 50% 40%,
+      #000 40%,
+      transparent 100%
+    );
+  }
+
+  /* The same grid tuned for dark panels, where the lines must be light. */
+  .grid-fade-light {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(
+      ellipse 75% 60% at 50% 45%,
+      #000 35%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 75% 60% at 50% 45%,
+      #000 35%,
+      transparent 100%
+    );
+  }
+
+  /* Film-grain overlay. An inline SVG turbulence, so there is no image request
+     and no layout shift. `pointer-events-none` keeps it decorative. */
+  .noise::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* The blurred orb used for every ambient background bloom. */
+  .orb {
+    @apply pointer-events-none absolute rounded-full blur-3xl;
+  }
+
+  /*
+   * A faint engineering grid, for the inside of a dark panel.
+   *
+   * The mask matters: without it the grid is uniformly visible edge to edge and
+   * reads as a texture pasted over the panel. Fading it out at the top and
+   * bottom makes the grid appear to sit *inside* the surface, brightest through
+   * the middle, which is what stops it competing with the card in front of it.
+   *
+   * The caller sets the opacity -- the pricing panel uses 0.07, which is the
+   * point at which the grid is perceptible without being countable.
+   */
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, currentColor 1px, transparent 1px),
+      linear-gradient(to bottom, currentColor 1px, transparent 1px);
+    background-size: 3.5rem 3.5rem;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      #000 22%,
+      #000 78%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      #000 22%,
+      #000 78%,
+      transparent
+    );
+  }
+
+  /* Gradient-filled display text. `bg-clip-text` needs the colour made
+     transparent, hence the paired `text-transparent`. */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: theme("backgroundImage.text-pine");
+  }
+
+  .text-gradient-light {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      100deg,
+      #f1f8f4 0%,
+      #bfe1ce 40%,
+      #e9ba5a 100%
+    );
+  }
+
+  /* Even line lengths for multi-line headings, so a wrapped headline does not
+     leave a one-word orphan. */
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ------------------------------------------------------------------------- */
+/* 4. Reduced motion                                                         */
+/* ------------------------------------------------------------------------- */
+
+/*
+ * Everything animated on this page -- reveals, drifting orbs, marquees, sheen
+ * sweeps, pulsing status rings, the SVG draw, the typing caret -- is opted out
+ * here in one place.
+ *
+ * Two separate mechanisms, because they are not the same fix:
+ *
+ *   - Durations are collapsed, so looping and one-shot animations both stop
+ *     being visible motion.
+ *   - Reveals are forced to their *end* state. Without this, a user with
+ *     reduced motion enabled would be left staring at `opacity: 0` content
+ *     whenever the IntersectionObserver had not fired, or had fired after the
+ *     CSS override applied.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Ambient orbs keep their gradient but stop moving. */
+  .orb {
+    animation: none !important;
+  }
+}

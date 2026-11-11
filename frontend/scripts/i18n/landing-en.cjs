@@ -1,0 +1,462 @@
+/**
+ * Landing-page catalogue additions -- English (source of truth).
+ *
+ * `scripts/apply-i18n.cjs` deep-merges each locale's `landing` tree into
+ * `messages/<locale>/landing.json`. Keys here are the ones referenced from
+ * `lib/content.ts` and the landing components; the English text is the source
+ * that fr/rn/sw translate. Arrays are positional and must stay index-aligned
+ * with the matching array in `lib/content.ts`.
+ */
+module.exports = {
+  landing: {
+    nav: {
+      homeAria: "Global Opportunities, home",
+      logoutFailed:
+        "Logout could not be completed. Please retry or clear this browser's session.",
+      logoutRecoveryNote:
+        "Clearing this browser's session removes its saved tokens, but does not confirm that the refresh token was revoked on the server.",
+      retryLogout: "Retry logout",
+      clearSession: "Clear this browser's session",
+      dismiss: "Dismiss",
+    },
+
+    hero: {
+      description:
+        "Global Opportunities brings funding opportunities, calls for projects, applications, evaluation, disbursement and payment tracking into one secure, multilingual workspace. A project owner discovers a call, builds a project against its real criteria, applies, and follows the funding through to delivery — without losing the thread in a dozen inboxes.",
+      stepProgress: "Step {step} of {total}",
+      mock: {
+        amount: "12k - 60k USD",
+        documentsReady: "3 documents ready",
+        documentsList: "Registration · Work plan · Budget",
+        trancheReleased: "Tranche 1 released",
+        trancheAmount: "USD 16,000 of 48,000",
+        askAi: "Ask the AI Assistant what this call needs",
+      },
+    },
+
+    trust: {
+      description:
+        "Every figure above describes the platform as it is built today. Nothing here is an adoption statistic, because no verified usage data exists yet.",
+      assurance:
+        "Security is described by what the platform does — token-based sessions, project-scoped documents, role-based access — not by badges it has not been awarded.",
+      details: [
+        "English, Français, Kirundi and Kiswahili interface catalogues.",
+        "Discover through Monitor — the full opportunity-to-impact journey.",
+        "Domain modules covering calls, projects, applications, funding and documents.",
+        "Actor roles the platform is designed around, from applicant to administrator.",
+      ],
+      signalDetails: {
+        auth: "Credentials are exchanged for a short-lived access token, and no session is kept in the page.",
+        docs: "Every uploaded file carries a category and a review state, so its status is visible to both sides.",
+        notifications:
+          "Deadlines, decisions and document states generate notifications with user-level preferences.",
+        structure:
+          "Applications, decisions and payments are structured records rather than attachments in email.",
+      },
+    },
+
+    discovery: {
+      description:
+        "Funding opportunities and calls for projects sit in one index. Filter by type, sector, location and status, then open a listing to see the eligibility criteria and the documents it asks for.",
+    },
+
+    features: {
+      description:
+        "Discovery is where a project owner starts. Everything after it — building the project, applying, being assessed, being funded, being paid, and proving what changed — happens against the same record instead of a new system each time.",
+      details: [
+        "One searchable index of funding opportunities and calls, filterable by type, sector, location and status.",
+        "A structured project record with objectives, results, budget and documents, so the project is built once and reused.",
+        "Applications carry a status and a history, so an applicant always knows which stage their submission has reached.",
+        "Defined criteria, assigned reviews and a recorded decision, so selection is explainable rather than opaque.",
+        "Awarded funding and each disbursement tracked against the project, with the next tranche visible.",
+        "Payments recorded against a disbursement, giving both sides one view of what has been paid and what is pending.",
+        "Documents uploaded once, categorised, and shared with exactly the parties attached to the project.",
+        "Deadline reminders, decision notices and document states delivered to the people who need them.",
+        "Plain-language answers about an opportunity, its eligibility and its documents — grounded in official information.",
+      ],
+    },
+
+    showcase: {
+      description:
+        "Each screen below is drawn from the same components as this page. What changes between them is the actor: an applicant browsing calls, a project owner managing delivery, a funder tracking an award.",
+      mock: {
+        search: "resilience",
+        meta: ["Closes 15 Oct", "Closes 18 Dec", "Opens 01 Nov"],
+        deltas: [
+          "+1 this month",
+          "2 awaiting review",
+          "USD, across 3 projects",
+          "4 need attention",
+        ],
+        activity: [
+          "Application submitted",
+          "Budget document replaced",
+          "Reviewer question answered",
+          "Deadline reminder sent",
+        ],
+        when: ["2 hours ago", "Yesterday", "3 days ago", "5 days ago"],
+        applicationTitles: [
+          "Watershed restoration",
+          "School clubs and study groups",
+          "Shared rural connectivity",
+        ],
+        funders: [
+          "Sample fund partner",
+          "Sample programme secretariat",
+          "Sample technology fund",
+        ],
+        amounts: ["USD 16,000", "USD 16,000", "USD 16,000"],
+        totalAwarded: "USD 48,000",
+        disbursed: "USD 24,000",
+        paymentDates: ["12 Aug 2026", "04 Sep 2026"],
+        paymentAmounts: ["USD 16,000", "USD 8,000"],
+      },
+    },
+
+    how: {
+      description:
+        "Every screen, notification and permission in the platform maps onto one of these nine stages. That is what keeps a project, its application, its funding and its reporting describing the same thing.",
+      details: [
+        "Search the index of open listings and filter down to the ones that match a sector, a location and a deadline.",
+        "Read the summary, eligibility criteria, required documents and deadline for each shortlisted listing.",
+        "Build the project record: objectives, expected results, budget, team and supporting documents.",
+        "Submit the project against a listing. The application inherits the project's documents instead of asking again.",
+        "Assessments run against defined criteria, with each review recorded against its assignment.",
+        "The selection decision is recorded against the application and both parties are notified.",
+        "Awarded funding is attached to the project with a disbursement schedule the applicant can see.",
+        "Payments are recorded against each disbursement, closing it out as the work is delivered.",
+        "Activity, indicators and documents stay visible on the project for its whole life, not just to the deadline.",
+      ],
+      outputs: [
+        "A shortlist",
+        "A clear go / no-go",
+        "A complete project",
+        "A tracked application",
+        "A scored assessment",
+        "A recorded outcome",
+        "An agreed schedule",
+        "A reconciled payment trail",
+        "Ongoing evidence",
+      ],
+    },
+
+    benefits: {
+      description:
+        "Most of the friction in applying for funding is not the writing. It is finding the call, working out what it wants, keeping the documents straight, and finding out what happened. These are the eight places the platform removes work.",
+      details: [
+        "Listings from every provider in one index, with one set of filters, instead of a dozen inboxes and websites.",
+        "Documents are attached to the project once and travel with the application, so nothing is re-uploaded per call.",
+        "A project is a record with objectives, results, budget and progress, not a folder of differently named files.",
+        "Criteria, scores and the decision are visible, so an applicant can see why an application stood or fell.",
+        "Awarded funding, the next tranche and what has been paid are visible to both sides at the same time.",
+        "Documents are categorised, reviewable and scoped to a project rather than scattered across email.",
+        "A user working in Kiswahili reads the same platform as a user working in French, in their own language.",
+        "An assistant that explains a call, lists the documents it needs and translates the technical parts.",
+      ],
+    },
+
+    ecosystem: {
+      description:
+        "The platform is the shared record. Each actor sees the part they are responsible for, and every interaction between them is a step on the same project rather than a message in a different thread.",
+      hubLabel: "The shared record every actor works against",
+      actorDetails: [
+        "Implement projects, own project records, and see their applications and funding in one place.",
+        "Publish opportunities, set criteria, assign evaluations, award funding and schedule disbursements.",
+        "Coordinate a project across a team, with a single record that everyone contributes to.",
+        "Discover a call, build a project against it, apply, and follow the outcome step by step.",
+        "Review assigned applications against published criteria and record a scored assessment.",
+        "Verify organisations, manage roles, and supervise platform activity and records.",
+      ],
+      flows: [
+        "Publish listings",
+        "Build a project",
+        "Apply",
+        "Assess",
+        "Decide",
+        "Disburse",
+      ],
+    },
+
+    projects: {
+      eyebrow: "Projects",
+      title: "Ideas seeking support. Projects making progress.",
+      description:
+        "Explore posted projects, funded work in progress, and recently completed initiatives.",
+      ctaNew: "Add your project",
+      ctaAll: "View all projects seeking funding",
+      errorFallback: "Could not load projects.",
+      retry: "Retry loading projects",
+      loading: "Loading projects…",
+      fundedTitle: "Funded projects",
+      groups: {
+        seeking: {
+          title: "Seeking funding",
+          body: "The four newest posted projects without an approved funding award.",
+          empty: "No posted projects are currently seeking funding.",
+        },
+        inProgress: {
+          title: "In progress",
+          body: "Up to four projects at 90% or below, ordered by progress from highest to lowest.",
+          empty: "No eligible funded projects in progress are available yet.",
+        },
+        completed: {
+          title: "Recently completed",
+          body: "The four most recently completed funded projects.",
+          empty: "No completed funded projects are available yet.",
+        },
+      },
+      items: {
+        watershed: {
+          title: "Watershed restoration across three communes",
+          funding: "USD 48,000 over 24 months",
+          objective:
+            "Restore degraded slopes and stabilise water sources in three communes, led by farmer cooperatives.",
+          results: [
+            "120 hectares under active restoration",
+            "40 farmer cooperatives engaged",
+            "Water source discharge restored in 6 sites",
+          ],
+          impact: ["restored", "cooperatives", "water sources"],
+        },
+        schoolClubs: {
+          title: "School clubs and community study groups",
+          funding: "USD 31,500 over 18 months",
+          objective:
+            "Establish durable student clubs and adult study groups that keep running after the project period.",
+          results: [
+            "60 school clubs formed and active",
+            "25 adult literacy groups meeting weekly",
+            "Cluster-level reading assessment carried out",
+          ],
+          impact: ["learners", "clubs", "districts"],
+        },
+        sharedConnectivity: {
+          title: "Shared rural connectivity points",
+          funding: "USD 65,000 over 30 months",
+          objective:
+            "Equip community access points with devices, connectivity and training, managed by local cooperatives.",
+          results: [
+            "25 access points equipped and running",
+            "60 community trainers certified",
+            "Cost-per-user below the national benchmark",
+          ],
+          impact: ["access points", "trainers", "users"],
+        },
+      },
+    },
+
+    ai: {
+      description:
+        "Ask a question in any of the four interface languages. The assistant works from the platform's own information — a listing, its criteria, its documents — rather than from an open-ended guess.",
+      capabilityDetails: [
+        "Summarise what a call is for, who it is open to, and what it will fund.",
+        "Turn a dense eligibility section into a checklist you can actually answer.",
+        "List the documents a call asks for and flag the ones still missing from your project.",
+        "Reduce a long call document to the paragraphs that affect your organisation.",
+        "Render an explanation in the language the reader is working in.",
+        "Walk through the next step of an application, in order, with nothing skipped.",
+      ],
+      script: {
+        assistant: [
+          "I can help you work through the official criteria. For a community grant, the two things that usually decide eligibility are legal registration and at least one year of recorded activity.",
+          "Most calls ask for three: a registration certificate, a signed work plan and a budget. Open the listing and the document panel lists them against what you have already uploaded.",
+        ],
+      },
+    },
+
+    languages: {
+      description:
+        "The interface ships in English, French, Kirundi and Kiswahili. A reader can search, filter, save and submit without leaving the language they started in, and an administrator can add a fifth language without touching a single component.",
+      note: "Interface and page content are translated into all four languages. A listing's own title stays in the language it was written in; the interface around it follows the reader.",
+    },
+
+    testimonials: {
+      quotes: [
+        "I used to keep calls in a spreadsheet that was already out of date. Now the deadline, the documents and where my application sits are all on one page, and I stop working from memory.",
+        "We publish a call once and can see every application against the same criteria. Reviewers no longer send us scores by email, and we can answer an applicant's question without hunting for the thread.",
+        "I am assigned specific applications, not asked to find them. My scores sit against the published criteria, so the decision I contribute to can be explained to whoever asks.",
+      ],
+    },
+
+    impact: {
+      description:
+        "Five changes, in the order they occur. Each one is a claim about how the platform works rather than a measurement of how well it is working, which is the only kind of claim available before launch.",
+      details: [
+        "A listing that would have been missed in a crowded inbox is now found with a filter and a deadline alert.",
+        "A project assembled against real criteria before the deadline, instead of written at 23:00 the night before.",
+        "Funding decisions and disbursements recorded in a place both parties can read, not reconciled from email.",
+        "Activity and indicators reviewed on schedule, while the project is still running and can still be adjusted.",
+        "Project owners and funding organisations working from the same record instead of exchanging versions.",
+      ],
+    },
+
+    pricing: {
+      roleDetails: [
+        "Register your organisation, publish listings, and manage the applications you receive.",
+        "Granted by a funder or administrator. Review assigned applications against published criteria.",
+        "Platform administration: verification, role grants and supervision of activity.",
+      ],
+    },
+
+    faq: {
+      description:
+        "The twelve questions that decide whether the platform is useful, answered without marketing language. Where the honest answer is that something is not built yet, that is what it says.",
+      a: {
+        q1: "Two listing types: funding opportunities, which award money against a project, and calls for projects, which invite proposals. Each listing carries a sector, a location, an eligibility summary, the documents it requires and a closing date. The discovery section filters across both types so you can narrow the index before you start reading.",
+        q2: "Every listing shows a status, and the filter lets you restrict the index to open calls only. The deadline is shown on the card and in the listing detail, and notifications can be configured per user so a closing date is not something you have to remember.",
+        q3: "A project record with its objectives, budget and documents, plus whatever the specific call asks for. Because documents are attached to the project rather than to the application, a project prepared once can be submitted to several calls without uploading anything again. The AI Assistant will list the documents a call requires.",
+        q4: "An application has a status and a history rather than a single submitted-or-not flag, so you can see which stage it has reached. Whether a submitted application can still be edited depends on the call's own rules, which are stated in its listing; the platform surfaces the stage, it does not override the funder's policy.",
+        q5: "Enough to be assessable: what the project will do, for whom, over what period, at what cost, and how you will know it worked. A project is created before a call is applied to, which means you can prepare against real criteria rather than writing to a deadline.",
+        q6: "Awarded funding is attached to the project together with a disbursement schedule. Each tranche is recorded as it is released, so the applicant can see what has been approved, what has arrived and what is next. The platform records the schedule and its progress; it is not itself a financial institution.",
+        q7: "The documents a project or call requires — registration certificates, work plans, budgets, concept notes, policies. Every file is categorised and carries a review state, and it is visible to the parties attached to that project rather than being published. Documents are stored against the project record so they stay with it for the project's whole life.",
+        q8: "Against defined criteria, with each reviewer assigned specific applications and each score recorded against its assignment. The selection decision is stored on the application, which is what makes the outcome explainable to an applicant who asks. The platform does not decide anything itself; it records the criteria, the scores and the decision.",
+        q9: "Payments are recorded against a disbursement, so a tranche can be reconciled as the work is delivered rather than as one lump at the end. Both the funding provider and the project owner see the same record, which removes the reconciliation that usually happens over email at the end of a reporting period.",
+        q10: "It explains a listing, summarises eligibility criteria into a checklist, lists the required documents, simplifies dense text, translates an explanation and walks you through the next step of an application. It does not decide funding, does not select applicants, and does not make a final eligibility judgement. Those decisions belong to the people running the call.",
+        q11: "English, Français, Kirundi and Kiswahili. The selector is in the navbar and the choice is remembered on this device, and it also sets the page's language attribute so screen readers and browser translation work correctly. Interface and page content are translated into all four languages; a listing's own text stays in the language it was written in.",
+        q12: "Signing in exchanges your credentials for a short-lived access token rather than a stored session, and the platform is built with organisation, evaluator and administrator roles. Documents are scoped to a project instead of being public. Two honest caveats: role enforcement is still being wired into the API's permission classes, and signing out currently clears the token on this device only, because the API has no revocation endpoint yet.",
+      },
+    },
+
+    finalCta: {
+      details: [
+        "Browse the index of open listings, filtered by sector, location and deadline.",
+        "Create an account to build a project and keep its documents in one place.",
+        "Register an organisation to publish calls and manage the applications you receive.",
+      ],
+      note: "Listings, projects and applications shown on this page are sample records. The four interface languages are live, and page content is translated with them.",
+    },
+
+    opps: {
+      sectors: {
+        climate: "Climate & environment",
+        education: "Education",
+        entrepreneurship: "Entrepreneurship",
+        health: "Health",
+        digital: "Digital inclusion",
+        governance: "Governance",
+      },
+      locations: {
+        burundiRegional: "Burundi, regional",
+        eastAfrica: "East Africa",
+        regional: "Regional",
+        burundiNational: "Burundi, national",
+        subSaharanAfrica: "Sub-Saharan Africa",
+        centralAfrica: "Central Africa",
+      },
+      places: {
+        burundi: "Burundi",
+      },
+      items: {
+        resilienceGrants: {
+          title: "Community resilience grants",
+          provider: "Sample funding provider",
+          amount: "USD 12,000 - 60,000",
+          summary:
+            "Supports locally led adaptation work — water, soil, early warning and household resilience — delivered by organisations based in the target area.",
+          eligibility: [
+            "Registered organisation or registered group",
+            "At least one year of activity",
+            "Activities delivered in the target area",
+          ],
+          documents: ["Registration certificate", "Signed work plan", "Budget"],
+        },
+        learningCommunities: {
+          title: "Learning communities call",
+          provider: "Sample programme secretariat",
+          amount: "Project budget up to USD 40,000",
+          summary:
+            "A call for proposals that build durable community learning structures: school clubs, community study groups and adult literacy networks.",
+          eligibility: [
+            "Education or youth organisation",
+            "Community-level delivery track record",
+            "Plan covering at least 12 months",
+          ],
+          documents: ["Concept note", "Organisational chart", "Safeguarding policy"],
+        },
+        youthEnterprise: {
+          title: "Youth-led enterprise support",
+          provider: "Sample fund partner",
+          amount: "USD 5,000 - 25,000",
+          summary:
+            "Working capital and mentoring for young founders, with a preference for enterprises that create local employment.",
+          eligibility: [
+            "Founder aged 18-35",
+            "Registered business",
+            "Business operating for under 24 months",
+          ],
+          documents: ["Business registration", "Cash-flow projection", "CV of the founder"],
+        },
+        maternalHealth: {
+          title: "Community maternal health programme",
+          provider: "Sample health partnership",
+          amount: "Programme budget, multi-year",
+          summary:
+            "Implementation partners sought for community-based maternal health, including referral pathways and midwifery training.",
+          eligibility: [
+            "Health NGO or accredited facility",
+            "Clinical governance in place",
+            "Experience in the target province",
+          ],
+          documents: ["Accreditation", "Clinical protocol", "Monitoring framework"],
+        },
+        digitalAccess: {
+          title: "Rural digital access grants",
+          provider: "Sample technology fund",
+          amount: "USD 20,000 - 90,000",
+          summary:
+            "Devices, connectivity and training for rural communities, prioritising shared access models over individual device distribution.",
+          eligibility: [
+            "Non-profit or public-sector entity",
+            "Partnership with a local community body",
+            "Three-year sustainability plan",
+          ],
+          documents: ["Concept note", "Partnership letters", "Sustainability plan"],
+        },
+        governanceCivics: {
+          title: "Civic education and local governance",
+          provider: "Sample civic foundation",
+          amount: "Grant up to USD 30,000",
+          summary:
+            "Civic education projects that build public understanding of local government, public budgets and citizens' rights.",
+          eligibility: [
+            "Civil society organisation",
+            "Evidence of community facilitation",
+            "Non-partisan programme",
+          ],
+          documents: ["Concept note", "Activity plan", "Facilitator profiles"],
+        },
+      },
+    },
+
+    api: {
+      unreachable:
+        "Cannot reach the API. Check your connection and make sure the frontend and Django servers are running.",
+      unreachableShort:
+        "Cannot reach the API. Make sure the frontend and Django servers are running.",
+      requestFailed: "The server could not complete your request. Please try again.",
+      accountLoadFailed: "Your account details could not be loaded.",
+    },
+
+    session: {
+      browserOnly: "A login session can only be saved in the browser.",
+      tokensMissing: "The login response did not include both tokens.",
+      saveFailed:
+        "Your browser could not save the login session. Allow site storage and try again.",
+      loginRequired: "Please log in to continue.",
+      expiredInactive:
+        "Your session ended after 60 minutes without activity. Please log in again.",
+      renewUnreachable:
+        "Cannot renew the session because the API is unreachable. Please try again.",
+      changed: "The login session changed. Please try again.",
+      expired: "Your login session has expired. Please log in again.",
+      renewFailed: "The server could not renew your session. Please try again.",
+      invalidRenewal: "The server returned an invalid session-renewal response.",
+      saveRenewedFailed: "Your browser could not save the renewed session.",
+      noRefreshToken:
+        "No refresh token is available. You can clear this browser's session instead.",
+      logoutFailed:
+        "Server-side logout could not be completed. Please retry or clear this browser's session.",
+      logoutFailedBare: "Server-side logout could not be completed.",
+    },
+  },
+};

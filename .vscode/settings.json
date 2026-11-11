@@ -1,0 +1,4 @@
+{
+  "python.analysis.extraPaths": ["./backend"],
+  "git.ignoreLimitWarning": true
+}
